@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*----------------------------------------------- Special paddings/margins/text */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik, sans-serif;
+}
+
+/*----------------------------------------------- Body */
+
+body {
+    background-color: #634087;
+}
+
+/*----------------------------------------------- Nav */
+
+.navbar-brand {
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.tagline {
+  font-size: 0.3em;
+  font-weight: 400;
+}
+
+.navbar-nav li {
+    padding-left: 2rem;
+}
+
+nav {
+    background: #c785ec;
+    border-bottom: solid 3px #8549a7;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-toggler {
+    background-color: #a86add;
+    border: 0.5px solid #634087;
+}
