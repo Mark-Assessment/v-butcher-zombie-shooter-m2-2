@@ -1,110 +1,254 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Zombie Shooter Game**
 
-Welcome veebee4 ,
+![Zombie Shooter Game shown on a variety of screen sizes]()
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Visit the deployed website: [Zombie Shooter By DeadPixel Games]()
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## **Project Description**
 
-## Gitpod Reminders
+This shooting game is based on a whack-a-mole game setup and has been made to be easy to play for anyone, any age but leans more towards gamers and users with an interest with first person shooter games. I decided to create this kind of game as zombies are one of my interests/obsessions and I thought it would be fun to play.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## CONTENTS
 
-`python3 -m http.server`
+* [User Experience](#user-experience-ux)
+  * [User Stories](#user-stories)
 
-A blue button should appear to click: _Make Public_,
+* [Design](#design)
+  * [Colour Scheme](#colour-scheme)
+  * [Typography](#typography)
+  * [Imagery](#imagery)
+  * [Wireframes](#wireframes)
+  * [Features](#features)
+    * [Future Implementations](#future-implementations)
+  * [Accessibility](#accessibility)
 
-Another blue button should appear to click: _Open Browser_.
+* [Technology Used](#technology-used)
+  * [Languages Used](#languages-used)
+  * [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* [Deployment & Local Development](#deployment--local-development)
+  * [Deployment](#deployment)
+  * [Local Development](#local-development)
+    * [How to Fork](#how-to-fork)
+    * [How to Clone](#how-to-clone)
 
-A blue button should appear to click: _Make Public_,
+* [Testing](#testing)
+  * [Solved Bugs](#solved-bugs)
+  * [Known Bugs](#known-bugs)
+  
+* [Credits](#credits)
+  * [Code Used](#code-used)
+  * [Content](#content)
+  * [Acknowledgments](#acknowledgments)
 
-Another blue button should appear to click: _Open Browser_.
+--- 
+![Zombie Shooter Game Banner]()
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## User Experience UX
 
-To log into the Heroku toolbelt CLI:
+- ### User Stories
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- #### First Time Visitor Goals
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+  1. As a first time visitor, I want to play the game easily, and have instructions on how to play which are quick and easy to get to.
+  2. As a first time visitor, I would like to see some sort of scoring system to see how well I do.
+  3. As a first time visitor, I would like to be able to restart the game easily.
 
-------
+- #### Returning Visitor Goals
 
-## Release History
+  1. As a returning visitor, I want to be able to change the difficulty.
+  2. As a returning visitor, I would like the option to save my score to a leaderboard, to see how well I score against others or to keep a log of my own score.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- #### Frequent Visitor Goals
 
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+  1. As a frequent visitor, I would like to change the theme/characters in the game.
+  2. As a frequent visitor, 
 
 ---
 
-Happy coding!
+### Design
+
+- #### Colour Scheme
+
+  For this project, I have chosen a palette of purples which fit with the spooky theme of zombies but is also pleasing to the eye and provides enough contrast between all the features to ensure the user has a pleasant time playing the game.
+  The navigation bar is a lighter shade of purple, with a darker border at the bottom to really distinguish between the navigation element and the body of the page. Once the user is on a smaller screen size than laptop size, the navigation toggler button appears and this has been assigned a darker colour than the navigation bar so the user can distinguish where the button is.
+  I have put a colours section in my CSS so if anything needed to be adjusted or changed, it would be quick and easy to do.
+
+| Website Element                   | Colour           |
+| --------------------------------- |:----------------:|
+| Background of Navigation          | #c785ec          |
+| Background of All Pages           | #634087          |
+|                                   |                  |
+| Body Text & Icons                 | Black            |
+
+
+![Zombie Shooter Game Colour Scheme]()
+
+- #### Typography
+
+  Google Fonts was used to import the chosen fonts for use on the site.
+
+  - For the Page Title and all text in the body of the website, I have used the google font Rubik due to it being easy to read and I have used the different font weights to change the look of the font for different areas of the site.
+
+  ![Rubik Font Example]()
+
+  I have also named the sans-serif font as a fallback font in case the other chosen fonts do not show for any reason.
+
+- #### Imagery
+
+  - For the headstones which the zombies pop out from behind, I have obtained a graphic from [Hiclipart](https://www.hiclipart.com/). For the zombies, I have downloaded free characters from [Craftpix.net](https://craftpix.net/freebies/free-zombie-villager-chibi-character-sprites/) and I used a favicon from [Favicon.io](https://favicon.io/emoji-favicons/biohazard/) using the biohazard symbol, fits really well with the zombie theme.
+
+- #### Wireframes
+
+  - Home Page Wireframes [Desktop]() [Mobile]()
+  - How To Play Wireframe [Tablet]()
+  - Leaderboard [Desktop]()
+
+## Technology Used
+
+This project is written using HTML, CSS and JavaScript in Gitpod. I have also used flex-box and bootstrap to make the site responsive, and it is currently being hosted on GitHub.
+
+## Features
+
+The website comprises of a homepage, where the main game element is contained, along with a how to play page and a modal pop-up to display the leaderboard.
+
+- Responsive on all devices, using a mobile first approach.
+![Mobile, tablet & desktop view]()
+
+- Interactive Menus and links on both pages.
+![Menu]()
+![Links]()
+
+- Text logo on the nav element that also acts as a link back to the home page.
+![Text]()
+
+- User feedback on button(s) on the navigation element and below the game when hovered over.
+![Hover Over Button]()
+
+
+#### Future Implementations
+
+For future implementations I would like to:
+
+1. Be able to introduce a harmless/victim character that would deduct points if clicked on/shot.
+2. Following the above, it would be good to be able to have another character which is special and gains more points when clicked on/shot.
+3. Be able to let the user change the theme of the game - this could not be done due to time constraints and skill level.
+
+### Accessibility
+
+I have been trying to make the project and website as accessible as possible. I have been doing this by:
+
+* Using semantic HTML.
+* Using the hover element on all buttons on the site to make it known to the user that they are hovering over a button.
+* Making sure all pictures have an alt attribute.
+* Ensuring that there is a enough colour contrast throughout the site and the background (and background image) does not distract from the content.
+* Displaying appropriate title on page tab, so users can easily see where they are on the site, just by looking at the tab.
+
+### Languages Used
+
+- HTML5
+- CSS3
+- Javascript
+
+### Frameworks, Libraries & Programs Used
+
+   + [Bootstrap 5.3.2:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+      - Bootstrap was used to create a responsive navigation menu to allow for a hamburger menu once the screen size reduced from desktop/
+   + [Google Fonts:](https://fonts.google.com/)
+      - Google fonts were used by importing the fonts ????????, into the style.css file which has been used on all pages within the project.
+   + [jQuery:](https://jquery.com/)
+      - jQuery comes with Bootstrap and makes the navbar responsive.
+   + [Git](https://git-scm.com/)
+      - The git command was used for version control via the terminal in Gitpod, to commit to Git and Push to GitHub.
+   + [GitHub:](https://github.com/)
+      - GitHub is used to save and store the files and projects code after being pushed from Git.
+   + [Balsamiq:](https://balsamiq.com/)
+      - Balsamiq was used to create wireframes.
+   + [Google Developer Tools](https://developers.google.com/web/tools) 
+      - To troubleshoot and test features, solve issues with responsiveness and styling.
+   + [Am I Responsive?](http://ami.responsivedesign.is/)
+      - To show the website home page image on a range of devices.
+
+## Deployment & Local Development
+
+### Deployment
+
+The site is deployed using GitHub Pages - [Zombie Shooter Game]().
+
+To Deploy the site using GitHub Pages:
+
+1. Login (or signup) to Github.
+2. Go to the repository for this project, []().
+3. Click the settings button.
+4. Select pages in the left hand navigation menu.
+5. From the source dropdown select main branch and press save.
+6. The site has now been deployed, please note that this process may take a few minutes before the site goes live.
+
+### Local Development
+
+#### How to Fork
+
+To fork the repository:
+
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, []()
+3. Click the Fork button in the top right corner.
+
+#### How to Clone
+
+To clone the repository:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, []()
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
+- - -
+
+## Testing
+
+  Please click [HERE](testing.md) for all testing.
+
+### Solved Bugs
+
+| No   | Bug  | How I solved the issue |
+| :--- | :--- | :--- |
+| 1 | After reading that Bootstrap was not required for this project on the Slack channels I was trying to work without the bootstrap framework and found it extremely difficult to code a completely HTML and CSS hamburger menu ![CSS hamburger menu not working properly](/documentation/testing/css-hamburger-bug.png)| After speaking with my tutor, she suggested that I could use the bootstrap framework just for the menu and that would be acceptable for the project, I read the documentation on the Bootstrap navigation element and implemented this into my site |
+| 2 | For the contact page, I wanted a map to be at the bottom of the content on that page and also for it to be responsive, I had placed an embedded map but it was only one size and did not look good within other device sizes | I typed my query into google and found a good [tutorial](https://www.w3schools.com/howto/howto_css_responsive_iframes.asp) on W3 schools which showed how to style the class for the map|
+| 3 | The font for the navigation links would not change to the particular font I wanted | I researched this and managed to find [this article](https://forum.squarespace.com/topic/253132-custom-css-not-overriding-font-styles-site-nav-links/) where I learnt about the !important attribute and fixed this issue. This attribute was then used for other elements |
+
+### Known Bugs
+
+* When testing was carried out on an Iphone 12 mobile, the booking in form does not display correctly; the title is off center, the checkbox is left aligned for some reason and users have to scroll to the right slightly to view the end of the text box. This is all displayed correctly when viewing on a desktop and reducing the screen size either just through the browser or through devtools.
+
+  <img src="documentation/testing/mobile-form-screenshot.png" height="500">
+
+* I noticed the border style that I had applied to the menu links, applies itself to the full width on the hamburger menu but on the full desktop menu, the border is only as long as the navigation link word. This could be rectified just by spending further time on the project.
+
+![Menu bottom border bug](documentation/testing/border-menu-bug.png)
+
+- - -
+
+## Credits
+
+### Code Used
+
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+* 
+
+### Content
+
+### Acknowledgments
+
+I would like to acknowledge the following people:
+
+* 
