@@ -58,7 +58,6 @@ nav {
     display: flex;
     flex-wrap: wrap;
     margin: 3rem auto;
-    border: 2px solid green;
   }
   
   .grave {
@@ -81,7 +80,7 @@ nav {
   
   .zombie {
     background: url('../images/zombie.png') bottom center no-repeat;
-    background-size: 60%;
+    background-size: 160%;
     position: absolute;
     top: 100%;
     width: 100%;
@@ -90,7 +89,7 @@ nav {
   }
   
   .grave.up .zombie {
-    top: 0;
+    top: -10%;
   }
 
   /*----------------------------------------------- Controls Area */
