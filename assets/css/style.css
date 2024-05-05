@@ -50,6 +50,11 @@ nav {
     background-color: #deb7ff;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
 /*----------------------------------------------- Game Area */
   
   .game-board {

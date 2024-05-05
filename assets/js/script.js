@@ -1,3 +1,5 @@
+// Core game code adapted from Whack-A-Mole tutorial on https://courses.wesbos.com/
+// Global variables
 const graves = document.querySelectorAll('.grave');
 const scoreBoard = document.querySelector('.score');
 const zombies = document.querySelectorAll('.zombie');
@@ -5,11 +7,13 @@ let lastGrave;
 let timeUp = false;
 let score = 0;
 
-function randomTime (min, max) { // function to get the zombies to pop up from behind the headstones at random times
+// function to get the zombies to pop up from behind the headstones at random times
+function randomTime (min, max) { // 
     return Math.round(Math.random() * (max - min) + min);
 }
 
-function randomGrave(graves) { // function to select a random headstone for the zombie to appear behind
+// function to select a random headstone for the zombie to appear behind
+function randomGrave(graves) { 
     const idx = Math.floor(Math.random() * graves.length);
     const grave = graves[idx];
     if(grave === lastGrave) { // makes sure the function doesn't select the same hole twice in a row
@@ -21,7 +25,8 @@ function randomGrave(graves) { // function to select a random headstone for the 
     return grave;
 }
 
-function popUp() { // picks the grave and time for the zombie to 'pop up' and stops when time is up
+// function to randomly pick the grave and time for the zombie to 'pop up' and stops when time is up
+function popUp() { 
     const time = randomTime(200, 1000);
     const grave = randomGrave(graves);
     grave.classList.add('up');
@@ -33,21 +38,23 @@ function popUp() { // picks the grave and time for the zombie to 'pop up' and st
     }, time);
 }
 
-function startGame() { //links to start button for user to initiate the game
+// function adding a click event to start button for user to initiate the game
+function startGame() {
     scoreBoard.textContent = 0;
     timeUp = false;
     score = 0;
     popUp();
-    setTimeout(() => {
+    setTimeout(() => { // sets the time to be up after 10 seconds/10000ms
         timeUp = true;
     }, 10000);
 }
 
+// function for "shooting" the zombie when mouse is clicked (event) on zombie picture
 function shoot(e) {
-    if(!e.isTrusted) return // stops user from "faking" a click
-    score++;
+    if(!e.isTrusted) return; // stops user from "faking" a click
+    score++; // adds a point to score board when zombie is clicked & removes 'up' class so zombie goes back down
     this.classList.remove('up');
     scoreBoard.textContent = score;
 }
 
-zombies.forEach(zombie => zombie.addEventListener('click', shoot));
+zombies.forEach(zombie => zombie.addEventListener('click', shoot)); // evern listener to look out for a click on the zombies and then run function shoot
