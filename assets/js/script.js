@@ -6,6 +6,7 @@ const zombies = document.querySelectorAll('.zombie');
 let lastGrave;
 let timeUp = false;
 let score = 0;
+const audio = new Audio("assets/audio/shot.mp3");
 
 // function to get the zombies to pop up from behind the headstones at random times
 function randomTime (min, max) { // 
@@ -57,4 +58,12 @@ function shoot(e) {
     scoreBoard.textContent = score;
 }
 
-zombies.forEach(zombie => zombie.addEventListener('click', shoot)); // evern listener to look out for a click on the zombies and then run function shoot
+zombies.forEach(zombie => zombie.addEventListener('click', shoot)); // event listener to look out for a click on the zombies and then run function shoot
+
+// plays a shot of a gun when the zombies are clicked on - obtained and adapted from tutorial - https://dev.to/shantanu_jana/how-to-play-sound-on-button-click-in-javascript-3m48
+zombies.forEach(zombie => {
+    zombie.addEventListener("click", () => {
+        audio.currentTime = 0; //rewinds to the start of the sound so that it can be hit multiple times
+        audio.play();
+    });
+  });
