@@ -50,9 +50,9 @@ This shooting game is based on a whack-a-mole game setup and has been made to be
 
 - #### First Time Visitor Goals
 
-  1. As a first time visitor, I want to play the game easily, and have instructions on how to play which are quick and easy to get to.
+  1. As a first time visitor, I want to be able to start the game easily & see how much time I have to do it.
+  2. As a first time visitor, I want to have instructions on how to play which are quick and easy to get to.
   2. As a first time visitor, I would like to see some sort of scoring system to see how well I do.
-  3. As a first time visitor, I would like to be able to restart the game easily.
 
 - #### Returning Visitor Goals
 
@@ -62,7 +62,6 @@ This shooting game is based on a whack-a-mole game setup and has been made to be
 - #### Frequent Visitor Goals
 
   1. As a frequent visitor, I would like to change the theme/characters in the game.
-  2. As a frequent visitor, 
 
 ---
 

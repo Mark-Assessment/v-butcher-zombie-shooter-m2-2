@@ -58,12 +58,27 @@ function shoot(e) {
     scoreBoard.textContent = score;
 }
 
+// function to show a timer
+function timer(seconds) {
+    let counter = seconds;
+      
+    const interval = setInterval(() => {
+      console.log(counter);
+      counter--;
+        
+      if (counter < 0 ) {
+        clearInterval(interval);
+        console.log('Ding!');
+      }
+    }, 1000);
+  }
+
 zombies.forEach(zombie => zombie.addEventListener('click', shoot)); // event listener to look out for a click on the zombies and then run function shoot
 
-// plays a shot of a gun when the zombies are clicked on - obtained and adapted from tutorial - https://dev.to/shantanu_jana/how-to-play-sound-on-button-click-in-javascript-3m48
+// plays a sound of a gun shot when the zombies are clicked on - obtained and adapted from tutorial - https://dev.to/shantanu_jana/how-to-play-sound-on-button-click-in-javascript-3m48
 zombies.forEach(zombie => {
     zombie.addEventListener("click", () => {
-        audio.currentTime = 0; //rewinds to the start of the sound so that it can be hit multiple times
-        audio.play();
+        audio.currentTime = 0; //rewinds to the start of the sound so that it can be hit 
+        audio.play();           // multiple times and sound doesn't have to finish before it can be played again
     });
   });

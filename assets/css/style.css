@@ -63,6 +63,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     margin: 3rem auto;
+    cursor: crosshair; /* changes cursor to crosshair when mouse is over the game board*/
   }
   
   .grave {
@@ -121,7 +122,7 @@ nav {
     align-self: center;
   }
 
-  .start, .reset, .difficulty, .dark-light-mode {
+  .start, .difficulty, .dark-light-mode {
     margin: 0.5em;
     padding: 0.5em;
     background-color: #a86add;
@@ -129,6 +130,6 @@ nav {
     border-radius: 10px;
   }
 
-  .start:hover, .reset:hover, .difficulty:hover, .dark-light-mode:hover {
+  .start:hover, .difficulty:hover, .dark-light-mode:hover {
     background-color: #deb7ff;
   }

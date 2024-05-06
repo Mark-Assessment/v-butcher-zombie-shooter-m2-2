@@ -78,13 +78,12 @@
         <div class="zombie"></div>
       </div>
     </div>
-      <!-- Controls area with score, timer and buttons to start, reset, change difficulty and turn on light/dark mode -->
+      <!-- Controls area with score, timer and buttons to start, change difficulty and turn on light/dark mode -->
       <div class="control-area">
-        <div class="timer">Time: <span class="time">0</span></div>
+        <div class="timer">Time: <span class="time display-time-left"></span></div>
         <div class="score-board">Score: <span class="score">0</span></div>
         <div class="control-buttons">
           <button class="start" onclick="startGame()">Start!</button>
-          <button class="reset" onclick="reset()">Reset</button>
           <button class="difficulty" onclick="changeDifficulty()">Change Difficulty</button>
           <button class="dark-light-mode">
             <i class="fa-solid fa-moon"></i>
