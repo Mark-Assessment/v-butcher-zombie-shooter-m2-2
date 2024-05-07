@@ -84,7 +84,22 @@
         <div class="score-board"><strong>Score: </strong><span class="score">0</span></div>
         <div class="control-buttons">
           <button class="start" onclick="startGame()">Start!</button>
-          <button class="difficulty" onclick="changeDifficulty()">Change Difficulty</button>
+          <button class="difficulty" id="open-modal" onclick="changeDifficulty()">Change Difficulty</button>
+          <!-- Modal for difficulty selection -->
+          <div id="modal-container" class="">
+            <div id="modal-content">
+              <h2>Choose Your Difficulty</h2>
+              <div class="difficulty-buttons">
+                <button class="skillbtn">Easy</button>
+                <button class="skillbtn">Normal</button>
+                <button class="skillbtn">Hard</button>
+                <button class="skillbtn">Super Hard!</button>
+          
+                <button id="close-modal" class="btn">Close</button>
+              </div>
+            </div>
+          </div>
+
           <button class="dark-light-mode">
             <i class="fa-solid fa-moon"></i>
             <i class="fa-solid fa-sun"></i>

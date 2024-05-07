@@ -80,7 +80,6 @@ nav {
     width: 100%;
     height: 4rem;
     position: absolute;
-    z-index: 2;
     bottom: -10px;
   }
   
@@ -91,7 +90,7 @@ nav {
     top: 100%;
     width: 100%;
     height: 100%;
-    transition:all 0.4s;
+    transition: all 0.4s;
   }
   
   .grave.up .zombie {
@@ -130,6 +129,66 @@ nav {
     border-radius: 10px;
   }
 
+  
   .start:hover, .difficulty:hover, .dark-light-mode:hover {
     background-color: #deb7ff;
+  }
+
+  /*----------------------------------------------- Choose Your Difficulty Modal */
+  /* adapted from tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I
+
+ /* Modal covers the entire screen and centers the box containing buttons to select difficulty */
+  #modal-container {
+    /*box-sizing: border-box;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+  }
+
+  /* Changed the modal opacity to be visible */
+  #modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* styling content within the modal */
+  #modal-content {
+    max-width: 80%;
+    border: 5px double #634087;
+    border-radius: 10px;
+    box-shadow: 3px 7px 10px rgba(255, 255, 255, 0.4);
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    z-index: 1;
+  }
+
+  /* styling div holding buttons */
+  .difficulty-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skillbtn {
+    border-radius: 10px;
+    background-color: #634087;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  #close-modal {
+    background-color: #c785ec;
+    border: #634087;
+    margin: 1rem;
   }

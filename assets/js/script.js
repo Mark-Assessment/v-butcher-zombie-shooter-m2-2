@@ -58,6 +58,8 @@ function timer() {
 
 // function adding a click event to start button for user to initiate the game
 function startGame() {
+    alert("This game contains loud sound! Make sure your speakers are not turned up too high!");
+    setTimeout((startGame) => { // sets a 2 second delay after the alert box before the game starts so user can get mouse back to game board
     scoreBoard.textContent = 0;
     timeUp = false;
     score = 0;
@@ -65,7 +67,8 @@ function startGame() {
     popUp();
     setTimeout(() => { // sets the time to be up after 20 seconds/20000ms
         timeUp = true;
-    }, 20000);
+    }, 20000); 
+    }, 2000);
 }
 
 // function for "shooting" the zombie when mouse is clicked (event) on zombie picture
@@ -74,6 +77,23 @@ function shoot(e) {
     score++; // adds a point to score board when zombie is clicked & removes 'up' class so zombie goes back down
     this.classList.remove('up');
     scoreBoard.textContent = score;
+}
+
+function changeDifficulty() {
+    const difficultyBtn = document.getElementsByClassName("difficulty");
+    const openModal = document.getElementById("open-modal");
+    const closeModal = document.getElementById("close-modal");
+    const modalContainer = document.getElementById("modal-container");
+
+    // Open Modal
+    openModal.addEventListener("click", () => {
+    modalContainer.classList.add("show");
+    });
+
+    // Close Modal
+    closeModal.addEventListener("click", () => {
+    modalContainer.classList.remove("show");
+    });
 }
 
 // event listener to look out for a click on the zombies and then run function shoot
