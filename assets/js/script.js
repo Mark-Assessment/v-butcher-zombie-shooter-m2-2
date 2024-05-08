@@ -9,7 +9,7 @@ let score = 0;
 const audio = new Audio("assets/audio/shot.mp3");
 
 
-// function to get the zombies to pop up from behind the headstones at random times
+// function to get a random time for the zombies to pop up 
 function randomTime (min, max) { // 
     return Math.round(Math.random() * (max - min) + min);
 }
@@ -18,7 +18,7 @@ function randomTime (min, max) { //
 function randomGrave(graves) { 
     const idx = Math.floor(Math.random() * graves.length);
     const grave = graves[idx];
-    if(grave === lastGrave) { // makes sure the function doesn't select the same hole twice in a row
+    if(grave === lastGrave) { // makes sure the function doesn't use the same grave twice in a row
         console.log("Oops same grave!");
         return randomGrave(graves);
     }
@@ -27,7 +27,7 @@ function randomGrave(graves) {
     return grave;
 }
 
-// function to randomly pick the grave and time for the zombie to 'pop up' and stops when time is up
+// function for the zombie to 'pop up' using randomTime and randomGrave functions and stops when time is up
 function popUp() { 
     const time = randomTime(200, 1000);
     const grave = randomGrave(graves);
@@ -59,7 +59,7 @@ function timer() {
 // function adding a click event to start button for user to initiate the game
 function startGame() {
     alert("This game contains loud sound! Make sure your speakers are not turned up too high!");
-    setTimeout((startGame) => { // sets a 2 second delay after the alert box before the game starts so user can get mouse back to game board
+    setTimeout((startGame) => { // sets a 2 second/2000ms delay after the alert box before the game starts so user can get mouse back to game board in time
     scoreBoard.textContent = 0;
     timeUp = false;
     score = 0;
@@ -81,6 +81,7 @@ function shoot(e) {
 
 function changeDifficulty() {
     const difficultyBtn = document.getElementsByClassName("difficulty");
+    //adapted from tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I
     const openModal = document.getElementById("open-modal");
     const closeModal = document.getElementById("close-modal");
     const modalContainer = document.getElementById("modal-container");

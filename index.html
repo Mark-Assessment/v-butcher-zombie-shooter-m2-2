@@ -25,34 +25,24 @@
                 <a class="nav-link active" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">How To Play</a>
+                <a class="nav-link" href="how-to-play.html">How To Play</a>
               </li>
               <li class="nav-item">
-                <!-- Button for modal for leaderboard scores-->
-                <a href="#leaderboardmodal" class ="nav-link" data-toggle="modal" data-target="#leaderboardmodal">Leaderboard</a>
+                <!-- link to open modal for leaderboard scores-->
+                <a href="#" id="" onclick="leaderboard()">Leaderboard</a>
               </li>
             </ul>
-                <!-- Modal -->
-                <div class="modal fade" id="leaderboardmodal" tabindex="-1" role="dialog" aria-labelledby="leaderboardmodal" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="leaderboardmodal">Leaderboard</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                      </div>
+                <!-- Modal for leaderboard-->
+                <!-- <div id="modal-container" class="">
+                  <div id="modal-content">
+                    <h2>Leaderboard</h2>
+                    <div class="leaderboard">
+                      
+                
+                      <button id="close-modal" class="btn">Close</button>
                     </div>
                   </div>
-                </div>
-          </div>
+                </div> -->
         </div>
       </nav>
 </header>
@@ -90,22 +80,23 @@
             <div id="modal-content">
               <h2>Choose Your Difficulty</h2>
               <div class="difficulty-buttons">
-                <button class="skillbtn">Easy</button>
-                <button class="skillbtn">Normal</button>
-                <button class="skillbtn">Hard</button>
-                <button class="skillbtn">Super Hard!</button>
+                <button class="skillbtn" onclick="easyMode()">Easy</button>
+                <button class="skillbtn" onclick="normalMode()">Normal (default)</button>
+                <button class="skillbtn" onclick="hardMode()">Hard</button>
+                <button class="skillbtn" onclick="superHardMode()">Super Hard!</button>
           
                 <button id="close-modal" class="btn">Close</button>
               </div>
             </div>
           </div>
-
+          <!-- button for light/dark mode -->
           <button class="dark-light-mode">
             <i class="fa-solid fa-moon"></i>
             <i class="fa-solid fa-sun"></i>
           </button>
         </div>
     </div>
+    <footer>© veebee4 2024</footer>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

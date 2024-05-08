@@ -55,6 +55,7 @@ nav {
   color: black;
 }
 
+/*----------------------------------------------- Home Page */
 /*----------------------------------------------- Game Area */
   
   .game-board {
@@ -93,6 +94,7 @@ nav {
     transition: all 0.4s;
   }
   
+  /* adjusts position of zombie when it transitions up so the right amount shows */
   .grave.up .zombie {
     top: -10%;
   }
@@ -192,3 +194,53 @@ nav {
     border: #634087;
     margin: 1rem;
   }
+
+  /* Footer */
+  footer {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*----------------------------------------------- How To Play Page */
+
+
+  /*--------------------------------------------Media Queries*/
+
+/*------- For Tablet screens */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /*------- Home Page */
+  .game-board {
+    width: 35rem;
+    height: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+  }
+
+  .grave.up .zombie {
+    top: 10%;
+  }
+
+  .control-area {
+    padding-top: 2rem;
+  }
+
+  .timer, .score-board, .control-buttons {
+    width: 50%;
+    margin: 1rem auto;
+  }
+}
+
+/*------- For Laptop screens */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+}
+
+/*------- For Large Laptop screens */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+}
+
+/*------- For Desktop screens */
+@media screen and (min-width: 1920px) {
+}

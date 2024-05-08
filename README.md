@@ -81,7 +81,7 @@ This shooting game is based on a whack-a-mole game setup and has been made to be
 | Body Text & Icons                 | Black            |
 
 
-![Zombie Shooter Game Colour Scheme]()
+![Zombie Shooter Game Colour Scheme](documentation/colour-palette.png)
 
 - #### Typography
 
@@ -89,7 +89,8 @@ This shooting game is based on a whack-a-mole game setup and has been made to be
 
   - For the Page Title and all text in the body of the website, I have used the google font Rubik due to it being easy to read and I have used the different font weights to change the look of the font for different areas of the site.
 
-  ![Rubik Font Example]()
+  ![Rubik Font Example Bold](documentation/rubik-900-example.png)
+  ![Rubik Font Example Light](documentation/rubik-300-example.png)
 
   I have also named the sans-serif font as a fallback font in case the other chosen fonts do not show for any reason.
 
@@ -99,9 +100,9 @@ This shooting game is based on a whack-a-mole game setup and has been made to be
 
 - #### Wireframes
 
-  - Home Page Wireframes [Desktop]() [Mobile]()
-  - How To Play Wireframe [Tablet]()
-  - Leaderboard [Desktop]()
+  - Home Page Wireframes [Desktop](/documentation/wireframes/home-desktop.png) [Mobile](/documentation/wireframes/home-mobile.png) [Tablet] (/documentation/wireframes/home-tablet.png)
+  - How To Play Wireframe [Desktop](/documentation/wireframes/how-to-play.png)
+  - Leaderboard [Desktop](/documentation/wireframes/leaderboard-desktop.png) [Mobile] (/documentation/wireframes/leaderboard-mobile.png)
 
 ## Technology Used
 
