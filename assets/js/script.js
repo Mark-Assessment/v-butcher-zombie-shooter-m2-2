@@ -10,7 +10,7 @@ const audio = new Audio("assets/audio/shot.mp3");
 
 
 // function to get a random time for the zombies to pop up 
-function randomTime (min, max) { // 
+function randomTime(min, max) { // 
     return Math.round(Math.random() * (max - min) + min);
 }
 
@@ -76,26 +76,70 @@ function shoot(e) {
     if(!e.isTrusted) return; // stops user from "faking" a click
     score++; // adds a point to score board when zombie is clicked & removes 'up' class so zombie goes back down
     this.classList.remove('up');
-    scoreBoard.textContent = score;
+    scoreBoard.textContent = score; // displays the users score as they progress through the game
 }
 
+//functions for each difficulty levels
+function easyMode() {
+
+}
+
+function NormalMode() {
+    
+}
+
+function HardMode() {
+    
+}
+
+function SuperHardMode() {
+    
+}
+
+// function to show modal for user to select difficulty setting
 function changeDifficulty() {
     const difficultyBtn = document.getElementsByClassName("difficulty");
     //adapted from tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I
-    const openModal = document.getElementById("open-modal");
-    const closeModal = document.getElementById("close-modal");
-    const modalContainer = document.getElementById("modal-container");
+    const openModalDifficulty = document.getElementById("open-modal2");
+    const closeModalDifficulty = document.getElementById("close-modal2");
+    const modalContainerDifficulty = document.getElementById("modal-container-difficulty");
 
     // Open Modal
-    openModal.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+    openModalDifficulty.addEventListener("click", () => {
+    modalContainerDifficulty.classList.add("show");
     });
 
     // Close Modal
-    closeModal.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+    closeModalDifficulty.addEventListener("click", () => {
+    modalContainerDifficulty.classList.remove("show");
     });
 }
+
+// function to show modal for leaderboard
+function leaderboard() {
+    const leaderboardBtn = document.getElementsByClassName("leaderboard");
+    //adapted from tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I
+    const openModalLeaderboard = document.getElementById("open-modal");
+    const closeModalLeaderboard = document.getElementById("close-modal");
+    const modalContainerLeaderboard = document.getElementById("modal-container-leaderboard");
+
+    // Open Modal
+    openModalLeaderboard.addEventListener("click", () => {
+    modalContainerLeaderboard.classList.add("show");
+    });
+
+    // Close Modal
+    closeModalLeaderboard.addEventListener("click", () => {
+    modalContainerLeaderboard.classList.remove("show");
+    });
+}
+
+//function for user to toggle between light mode & dark mode
+// Followed tutorial - https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp to toggle light/dark mode //
+function darkMode() {
+    const dark = document.body;
+    dark.classList.toggle("dark-mode");
+ }
 
 // event listener to look out for a click on the zombies and then run function shoot
 zombies.forEach(zombie => zombie.addEventListener('click', shoot)); 

@@ -19,6 +19,55 @@ body {
     font-family: Rubik, sans-serif;
 }
 
+.dark-mode {
+  background-color: black;
+}
+
+.dark-mode nav {
+  background-color: #8549a7;
+}
+
+.dark-mode .navbar-toggler {
+  background-color: #8549a7;
+  border: 1px solid black;
+}
+
+.dark-mode .timer {
+  background-color: #8549a7;
+}
+
+.dark-mode .score-board {
+  background-color: #8549a7;
+}
+
+.dark-mode .start {
+  background-color: #8549a7;
+}
+
+.dark-mode .difficulty {
+  background-color: #8549a7;
+}
+
+.dark-mode .dark-light-mode {
+  background-color: #8549a7;
+}
+
+.dark-mode .navbar-toggler:hover {
+  background-color: #a86add;
+}
+
+.dark-mode .start:hover {
+  background-color: #a86add;
+}
+
+.dark-mode .difficulty:hover {
+  background-color: #a86add;
+}
+
+.dark-mode .dark-light-mode:hover {
+  background-color: #a86add;
+}
+
 /*----------------------------------------------- Nav */
 
 .navbar-brand {
@@ -29,6 +78,7 @@ body {
 .tagline {
   font-size: 0.3em;
   font-weight: 400;
+  padding-top: 1rem;
 }
 
 .navbar-nav li {
@@ -37,7 +87,7 @@ body {
 
 nav {
     background: #c785ec;
-    border-bottom: solid 3px #8549a7;
+    border-bottom: double 3px #8549a7;
     box-shadow: 0 6px 10px rgba(0,0,0,0.1);
 }
 
@@ -51,8 +101,17 @@ nav {
 }
 
 .nav-link {
-  text-decoration: none;
+  text-decoration: underline;
   color: black;
+}
+
+button#open-modal.leaderboard {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
+  background-color: #a86add;
+  padding: 0.5em;
+  margin-top: 0.5rem;
 }
 
 /*----------------------------------------------- Home Page */
@@ -131,7 +190,6 @@ nav {
     border-radius: 10px;
   }
 
-  
   .start:hover, .difficulty:hover, .dark-light-mode:hover {
     background-color: #deb7ff;
   }
@@ -140,7 +198,7 @@ nav {
   /* adapted from tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I
 
  /* Modal covers the entire screen and centers the box containing buttons to select difficulty */
-  #modal-container {
+  #modal-container-difficulty {
     /*box-sizing: border-box;*/
     position: fixed;
     top: 0;
@@ -158,13 +216,13 @@ nav {
   }
 
   /* Changed the modal opacity to be visible */
-  #modal-container.show {
+  #modal-container-difficulty.show {
     opacity: 1;
     pointer-events: auto;
   }
 
   /* styling content within the modal */
-  #modal-content {
+  #modal-content-difficulty {
     max-width: 80%;
     border: 5px double #634087;
     border-radius: 10px;
@@ -189,11 +247,56 @@ nav {
     padding: 0.5rem;
   }
 
-  #close-modal {
+  #close-modal2 {
     background-color: #c785ec;
     border: #634087;
     margin: 1rem;
   }
+
+  /*----------------------------------------------- Leaderboard Modal */
+  /* adapted from tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I */
+
+  #modal-container-leaderboard {
+    /*box-sizing: border-box;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+  }
+
+  /* Changed the modal opacity to be visible */
+  #modal-container-leaderboard.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* styling content within the modal */
+  #modal-content-leaderboard {
+    max-width: 80%;
+    border: 5px double #634087;
+    border-radius: 10px;
+    box-shadow: 3px 7px 10px rgba(255, 255, 255, 0.4);
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    z-index: 1;
+  }
+
+  #close-modal2 {
+    background-color: #c785ec;
+    border: #634087;
+    margin: 1rem;
+  }
+
 
   /* Footer */
   footer {
@@ -201,10 +304,21 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 1rem;
   }
 
   /*----------------------------------------------- How To Play Page */
 
+  .instructions-header {
+    text-align: center;
+    font-weight: 900;
+    margin: 2rem;
+    text-decoration: underline;
+  }
+
+  .instructions-container {
+    border: 3px double black;
+  }
 
   /*--------------------------------------------Media Queries*/
 
@@ -214,9 +328,6 @@ nav {
   .game-board {
     width: 35rem;
     height: 25rem;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 3rem auto;
   }
 
   .grave.up .zombie {
@@ -235,10 +346,67 @@ nav {
 
 /*------- For Laptop screens */
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
+  /*------- Home Page */
+  .navbar-brand {
+    font-size: 2em;
+  }
+
+  .tagline {
+    font-size: 0.5em;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  button .leaderboard {
+
+  }
+
+  .game-board {
+    width: 40rem;
+    height: 40rem;
+    margin-top: 1rem;
+  }
+
+  .grave.up .zombie {
+    top: 5%;
+  }
+
+  .grave:after {
+    width: 100%;
+    height: 6rem;
+  }
+
+  .timer, .score-board, .control-buttons {
+    width: 50%;
+    margin: 1rem auto;
+  }
 }
 
 /*------- For Large Laptop screens */
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
+  /*------- Home Page */
+  .game-board {
+    width: 40rem;
+    height: 40rem;
+    margin-top: 1rem;
+  }
+
+  .grave.up .zombie {
+    top: 5%;
+  }
+
+  .grave:after {
+    width: 100%;
+    height: 6rem;
+  }
+
+  .timer, .score-board, .control-buttons {
+    width: 50%;
+    margin: 1rem auto;
+  }
 }
 
 /*------- For Desktop screens */

@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <header>
-    <!-- Nav bar with title, and links to how to play page and  -->
+    <!-- Nav bar with title, and links to how to play page and leaderboard -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand title" href="index.html">Zombie Shooter<br><p class="tagline">By DeadPixel Games</p></a>
+          <a class="navbar-brand title" href="index.html">Zombie Shooter<p class="tagline">By DeadPixel Games</p></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -29,12 +29,12 @@
               </li>
               <li class="nav-item">
                 <!-- link to open modal for leaderboard scores-->
-                <a href="#" id="" onclick="leaderboard()">Leaderboard</a>
+                <button id="open-modal" class="leaderboard" onclick="leaderboard()">Leaderboard</button>
               </li>
             </ul>
                 <!-- Modal for leaderboard-->
-                <!-- <div id="modal-container" class="">
-                  <div id="modal-content">
+                <div id="modal-container-leaderboard" class="">
+                  <div id="modal-content-leaderboard">
                     <h2>Leaderboard</h2>
                     <div class="leaderboard">
                       
@@ -42,7 +42,7 @@
                       <button id="close-modal" class="btn">Close</button>
                     </div>
                   </div>
-                </div> -->
+                </div>
         </div>
       </nav>
 </header>
@@ -74,10 +74,10 @@
         <div class="score-board"><strong>Score: </strong><span class="score">0</span></div>
         <div class="control-buttons">
           <button class="start" onclick="startGame()">Start!</button>
-          <button class="difficulty" id="open-modal" onclick="changeDifficulty()">Change Difficulty</button>
+          <button class="difficulty" id="open-modal2" onclick="changeDifficulty()">Change Difficulty</button>
           <!-- Modal for difficulty selection -->
-          <div id="modal-container" class="">
-            <div id="modal-content">
+          <div id="modal-container-difficulty" class="">
+            <div id="modal-content-difficulty">
               <h2>Choose Your Difficulty</h2>
               <div class="difficulty-buttons">
                 <button class="skillbtn" onclick="easyMode()">Easy</button>
@@ -85,14 +85,13 @@
                 <button class="skillbtn" onclick="hardMode()">Hard</button>
                 <button class="skillbtn" onclick="superHardMode()">Super Hard!</button>
           
-                <button id="close-modal" class="btn">Close</button>
+                <button id="close-modal2" class="btn">Close</button>
               </div>
             </div>
           </div>
           <!-- button for light/dark mode -->
-          <button class="dark-light-mode">
+          <button class="dark-light-mode" onclick="darkMode()">
             <i class="fa-solid fa-moon"></i>
-            <i class="fa-solid fa-sun"></i>
           </button>
         </div>
     </div>
