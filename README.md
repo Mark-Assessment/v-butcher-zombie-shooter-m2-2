@@ -42,7 +42,7 @@ This shooting game is based on a whack-a-mole game setup and has been made to be
   * [Acknowledgments](#acknowledgments)
 
 --- 
-![Zombie Shooter Game Banner]()
+![Zombie Shooter Game Banner](/assets/images/screenshots/banner.png)
 
 ## User Experience UX
 
@@ -70,15 +70,19 @@ This shooting game is based on a whack-a-mole game setup and has been made to be
 - #### Colour Scheme
 
   For this project, I have chosen a palette of purples which fit with the spooky theme of zombies but is also pleasing to the eye and provides enough contrast between all the features to ensure the user has a pleasant time playing the game.
-  The navigation bar is a lighter shade of purple, with a darker border at the bottom to really distinguish between the navigation element and the body of the page. Once the user is on a smaller screen size than laptop size, the navigation toggler button appears and this has been assigned a darker colour than the navigation bar so the user can distinguish where the button is.
-  I have put a colours section in my CSS so if anything needed to be adjusted or changed, it would be quick and easy to do.
+  The navigation bar is a lighter shade of purple, with a darker border at the bottom to really distinguish between the navigation element and the body of the page. Once the user is on a smaller screen size than laptop size, the navigation toggler button appears and this has been assigned a darker colour than the navigation bar so the user can distinguish where the button is. There is also a dark mode so the user can make the colours of the game page, darker. All buttons and menus have a black text colour as the purple on these elements are lighter than the background and this still provides enough contrast. On the How To Play page however, I have had to change the colour of all text on the page to be white to provide enough contrast for the user.
+  I have put a colours section in my CSS so if anything needs to be adjusted or changed, it would be quick and easy to do.
 
 | Website Element                   | Colour           |
 | --------------------------------- |:----------------:|
 | Background of Navigation          | #c785ec          |
 | Background of All Pages           | #634087          |
-|                                   |                  |
 | Body Text & Icons                 | Black            |
+| Button Hover                      | #deb7ff          |
+| Dark Mode Navigation & Buttons    | #8549a7          |
+| Dark Mode Background              | Black            |
+| Dark Mode Button Hover            | #a86add          |
+| How To Play Page Text             | White            |
 
 
 ![Zombie Shooter Game Colour Scheme](documentation/colour-palette.png)
@@ -106,7 +110,7 @@ This shooting game is based on a whack-a-mole game setup and has been made to be
 
 ## Technology Used
 
-This project is written using HTML, CSS and JavaScript in Gitpod. I have also used flex-box and bootstrap to make the site responsive, and it is currently being hosted on GitHub.
+This project is written using HTML, CSS and JavaScript with JQuery in Gitpod. I have also used flex-box and bootstrap to make the site responsive, and it is currently being hosted on GitHub.
 
 ## Features
 
@@ -120,7 +124,7 @@ The website comprises of a homepage, where the main game element is contained, a
 ![Links]()
 
 - Text logo on the nav element that also acts as a link back to the home page.
-![Text]()
+![Text Logo]()
 
 - User feedback on button(s) on the navigation element and below the game when hovered over.
 ![Hover Over Button]()
@@ -139,9 +143,8 @@ For future implementations I would like to:
 I have been trying to make the project and website as accessible as possible. I have been doing this by:
 
 * Using semantic HTML.
-* Using the hover element on all buttons on the site to make it known to the user that they are hovering over a button.
-* Making sure all pictures have an alt attribute.
-* Ensuring that there is a enough colour contrast throughout the site and the background (and background image) does not distract from the content.
+* Applying the hover element on all buttons and the navigation toggler button (hamburger menu) on the site so that the user is aware they are hovering over a button.
+* Ensuring that there is a enough colour contrast throughout the site and the background does not distract from the game or content.
 * Displaying appropriate title on page tab, so users can easily see where they are on the site, just by looking at the tab.
 
 ### Languages Used

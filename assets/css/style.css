@@ -315,12 +315,12 @@ button#open-modal.leaderboard {
     font-weight: 900;
     margin: 2rem;
     text-decoration: underline;
-    color: black;
+    color: white;
     font-size: 3rem;
   }
 
   .instructions-container {
-    border: 3px double black;
+    border: 3px double white;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -344,7 +344,7 @@ button#open-modal.leaderboard {
   .instruction-text {
     text-align: center;
     font-weight: 600;
-    color: black;
+    color: white;
     margin: 1rem;
     font-size: 0.8rem;
   }
