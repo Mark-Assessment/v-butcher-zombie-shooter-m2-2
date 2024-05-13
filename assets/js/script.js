@@ -3,10 +3,14 @@
 const graves = document.querySelectorAll('.grave');
 const scoreBoard = document.querySelector('.score');
 const zombies = document.querySelectorAll('.zombie');
+const audio = new Audio("assets/audio/shot.mp3");
+//const playerNameInput = document.getElementById('playerNameInput');
+const hiscores = JSON.parse(localStorage.getItem('leaderboardData')) || [];
+const scoreList = document.querySelector('.scoreTable');
 let lastGrave;
 let timeUp = false;
 let score = 0;
-const audio = new Audio("assets/audio/shot.mp3");
+
 
 // function to get a random time for the zombies to pop up
 function randomTime(min, max) {
@@ -29,6 +33,21 @@ function randomGrave(graves) {
     return grave;
 }
 
+// function adding a click event to start button for user to initiate the game
+function startGame() {
+    alert("This game contains loud sound! Make sure your speakers are not turned up too high!");
+    setTimeout((startGame) => {
+    scoreBoard.textContent = 0;
+    timeUp = false;
+    score = 0;
+    timer();
+    popUp();
+    setTimeout(() => {
+        timeUp = true;
+    }, 20000);
+    }, 2000);
+}
+
 // function for the zombie to 'pop up' using randomTime and randomGrave functions and stops when time is up
 function popUp() {
     const time = randomTime(500, 1000);
@@ -38,6 +57,8 @@ function popUp() {
         grave.classList.remove('up');
         if (!timeUp) {
             popUp();
+        } else {
+            checkScore();
         }
     }, time);
 }
@@ -62,45 +83,9 @@ function timer() {
     }, 1000);
 }
 
-function startGame() {
-    // Displays an alert to warn the user about the loud audio
-    alert("This game contains loud sound! Make sure your speakers are not turned up too high!");
-
-    // Get the selected difficulty level
-    const selectedDifficulty = getSelectedDifficulty();
-
-    // Set the interval and duration based on the selected difficulty level
-    const interval = popUpDuration(selectedDifficulty);
-    const duration = gameDuration(selectedDifficulty);
-
-    // Set up the game
-    scoreBoard.textContent = 0;
-    timeUp = false;
-    score = 0;
-    timer();
-    popUp();
-
-    // End the game after the specified duration
-    setTimeout(() => {
-        timeUp = true;
-    }, duration);
-}
-
-// Helper function to get the selected difficulty level
-function getSelectedDifficulty() {
-    const difficultyButtons = document.querySelectorAll('.difficultyBtn');
-    let selectedDifficulty = 'normal'; // Default to normal if no button is selected
-    difficultyButtons.forEach(button => {
-        if (button.checked) {
-            selectedDifficulty = button.value;
-        }
-    });
-    return selectedDifficulty;
-}
-
 /*
 function for "shooting" the zombie when mouse is clicked (event) on zombie picture
-checks the click is not being "faked" by the user, then increments the score and adds it to the scoreboard
+checks the click is not being "faked" by the user using script, then increments the score and adds it to the scoreboard
 */
 function shoot(e) {
     if(!e.isTrusted) {
@@ -127,55 +112,13 @@ function changeDifficulty() {
     });
 }
 
-/* functions to set random times for the zombies to pop up for all difficulty modes
-and sets a default time if difficulty is not recognized */
-function popUpDuration(difficulty) {
-    let interval;
-        switch (difficulty) {
-            case 'easy':
-                interval = randomTime(800, 1000);
-                break;
-            case 'normal':
-                interval = randomTime(500, 1000);
-                break;
-            case 'hard':
-                interval = randomTime(300, 1000);
-                break;
-            case 'superhard':
-                interval = randomTime(200, 900);
-                break;
-            default:
-                interval = randomTime(500, 1000); // Default interval
-                break;
-        }
-        return interval;
-    }
+
 
 function displayDifficulty(difficulty) {
         alert(`Difficulty set to ${difficulty}.`);
     }
 
-    function gameDuration(difficulty) {
-        let duration;
-        switch (difficulty) {
-            case 'easy':
-                duration = 30000; // 30 seconds for easy difficulty
-                break;
-            case 'normal':
-                duration = 20000; // 20 seconds for normal difficulty
-                break;
-            case 'hard':
-                duration = 15000; // 15 seconds for hard difficulty
-                break;
-                case 'superhard':
-                duration = 10000; // 10 seconds for super hard difficulty
-                break;
-            default:
-                duration = 20000; // Default duration if difficulty is not recognized
-                break;
-        }
-        return duration;
-    }
+
 
 // function to show modal for leaderboard
 function leaderboard() {
@@ -193,6 +136,29 @@ function leaderboard() {
     });
 }
 
+function populateTable() {
+    scoreList.innerHTML = hiscores.map((row) => {
+      return `<tr><td>${row.clicker}</td><td>${row.score}</tr>`;
+    }).join('');
+  }
+
+function checkScore() {
+    let worstScore = 0;
+    if (hiscores.length > 4) {
+      worstScore = hiscores[hiscores.length - 1].score;
+    } if (score > worstScore) {
+        const clicker = window.prompt(`${score} – Top score! What's your name?`);
+        hiscores.push({score, clicker});
+    }
+    hiscores.sort((a, b) => a.score > b.score ? -1 : 1);
+        if (hiscores.length > 5) {
+        hiscores.pop();
+    }
+        populateTable();
+        localStorage.setItem('hiscores', JSON.stringify(hiscores));
+    }
+
+
 /*
 function for user to toggle between light mode & dark mode
 Followed tutorial - https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp to toggle light/dark mode
@@ -200,9 +166,11 @@ Followed tutorial - https://www.w3schools.com/howto/howto_js_toggle_dark_mode.as
 function darkMode() {
     const dark = document.body;
     dark.classList.toggle('dark-mode');
- }
+}
 
- // event listener to look out for a click on the zombies and then run function shoot
+// Event Listeners
+
+ // Event listener to look out for a click on the zombies and then run function shoot
 zombies.forEach((zombie) => {
     zombie.addEventListener('click', shoot);
 });
@@ -219,6 +187,7 @@ zombies.forEach((zombie) => {
         audio.play();
     });
 });
+  
 
 // Event listeners to set times for the difficulty levels when the user clicks the button
 document.getElementById('easyBtn').addEventListener('click', () => {

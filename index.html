@@ -37,9 +37,14 @@
             <div id="modal-container-leaderboard" class="">
               <div id="modal-content-leaderboard">
                 <h2>Leaderboard</h2>
-                  <div class="leaderboard">
-                      
-                
+                  <div class="leaderboardData">
+                    <table class="scoreTable">
+                    </table>
+                    <form id="leaderboardForm">
+                      <input type="text" id="playerNameInput" placeholder="Your Name" required>
+                      <button type="submit" onclick="savePlayerScore()">Submit Score</button>
+                    </form>
+                    </div>
                     <button id="close-modal" class="btn">Close</button>
                   </div>
               </div>

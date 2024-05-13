@@ -19,6 +19,8 @@ body {
     font-family: Rubik, sans-serif;
 }
 
+/*----------------------------------------------- Dark Mode */
+
 .dark-mode {
   background-color: black;
 }
@@ -66,6 +68,10 @@ body {
 
 .dark-mode .dark-light-mode:hover {
   background-color: #a86add;
+}
+
+.dark-mode footer {
+  color:#deb7ff;
 }
 
 /*----------------------------------------------- Nav */
