@@ -4,9 +4,6 @@ const graves = document.querySelectorAll('.grave');
 const scoreBoard = document.querySelector('.score');
 const zombies = document.querySelectorAll('.zombie');
 const audio = new Audio("assets/audio/shot.mp3");
-//const playerNameInput = document.getElementById('playerNameInput');
-const hiscores = JSON.parse(localStorage.getItem('leaderboardData')) || [];
-const scoreList = document.querySelector('.scoreTable');
 let lastGrave;
 let timeUp = false;
 let score = 0;
@@ -35,7 +32,11 @@ function randomGrave(graves) {
 
 // function adding a click event to start button for user to initiate the game
 function startGame() {
-    alert("This game contains loud sound! Make sure your speakers are not turned up too high!");
+    Swal.fire({
+        title: "Warning!",
+        text: "This game contains loud sound! Make sure your volume is at an appropriate level",
+        icon: "warning"
+    });
     setTimeout((startGame) => {
     scoreBoard.textContent = 0;
     timeUp = false;
@@ -58,7 +59,7 @@ function popUp() {
         if (!timeUp) {
             popUp();
         } else {
-            checkScore();
+            gameOver();
         }
     }, time);
 }
@@ -97,7 +98,7 @@ function shoot(e) {
 }
 
 // function to show modal for user to select/change difficulty setting
-function changeDifficulty() {
+/*function changeDifficulty() {
     const difficultyBtn = document.getElementsByClassName('difficulty');
     const openModalDifficulty = document.getElementById('open-modal2');
     const closeModalDifficulty = document.getElementById('close-modal2');
@@ -116,53 +117,18 @@ function changeDifficulty() {
 
 function displayDifficulty(difficulty) {
         alert(`Difficulty set to ${difficulty}.`);
+    }*/
+
+function gameOver() {
+    if(timeUp) {
+        Swal.fire({
+            title: "Winner!",
+            text: "You got " + score + " Points!",
+            icon: "success"
+          });
     }
-
-
-
-// function to show modal for leaderboard
-function leaderboard() {
-    const leaderboardBtn = document.getElementsByClassName('leaderboard');
-    const openModalLeaderboard = document.getElementById('open-modal');
-    const closeModalLeaderboard = document.getElementById('close-modal');
-    const modalContainerLeaderboard = document.getElementById('modal-container-leaderboard');
-
-    openModalLeaderboard.addEventListener('click', () => {
-    modalContainerLeaderboard.classList.add('show');
-    });
-
-    closeModalLeaderboard.addEventListener('click', () => {
-    modalContainerLeaderboard.classList.remove('show');
-    });
 }
 
-function populateTable() {
-    scoreList.innerHTML = hiscores.map((row) => {
-      return `<tr><td>${row.clicker}</td><td>${row.score}</tr>`;
-    }).join('');
-  }
-
-function checkScore() {
-    let worstScore = 0;
-    if (hiscores.length > 4) {
-      worstScore = hiscores[hiscores.length - 1].score;
-    } if (score > worstScore) {
-        const clicker = window.prompt(`${score} – Top score! What's your name?`);
-        hiscores.push({score, clicker});
-    }
-    hiscores.sort((a, b) => a.score > b.score ? -1 : 1);
-        if (hiscores.length > 5) {
-        hiscores.pop();
-    }
-        populateTable();
-        localStorage.setItem('hiscores', JSON.stringify(hiscores));
-    }
-
-
-/*
-function for user to toggle between light mode & dark mode
-Followed tutorial - https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp to toggle light/dark mode
-*/
 function darkMode() {
     const dark = document.body;
     dark.classList.toggle('dark-mode');
@@ -190,7 +156,7 @@ zombies.forEach((zombie) => {
   
 
 // Event listeners to set times for the difficulty levels when the user clicks the button
-document.getElementById('easyBtn').addEventListener('click', () => {
+/*document.getElementById('easyBtn').addEventListener('click', () => {
     const time = popUpDuration('easy');
     displayDifficulty('easy');
 });
@@ -208,4 +174,4 @@ document.getElementById('hardBtn').addEventListener('click', () => {
 document.getElementById('superHardBtn').addEventListener('click', () => {
     const time = popUpDuration('superhard');
     displayDifficulty('superhard');
-});
+});*/
