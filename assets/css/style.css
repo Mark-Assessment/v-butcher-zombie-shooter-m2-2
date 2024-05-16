@@ -306,6 +306,31 @@ footer {
 
 /*----------------------------------------------- Contact Us Page */
 
+h1 {
+  text-align: center;
+  color: white;
+  padding-top: 2rem;
+}
+
+h4 {
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 0 1rem 0 1rem;
+}
+
+.fa-gamepad {
+  padding: 1.5rem;
+  font-size: 3rem;
+  -webkit-text-stroke: 3px black;
+}
+
+h5 {
+  text-align: center;
+  color: white;
+}
+
 #fullname, #subject, #email, #message {
   border-radius: 10px;
 }

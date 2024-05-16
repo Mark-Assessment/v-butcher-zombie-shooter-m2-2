@@ -41,21 +41,23 @@
 </header>
 <div>
     <h1>Contact Us!</h1>
-    <h4><i class="fa-solid fa-gamepad"></i> If you would like to contact us about our games, if you want to create a game, OR if you have any questions at all, 
-        please use the contact form and we will aim to respond within 72 hours. <i class="fa-solid fa-gamepad"></i></h4>
+    <h4><i class="fa-solid fa-gamepad"></i><br>If you would like to contact us about our games, if you want to create a game, OR if you have any questions at all, 
+        please use the contact form and we will aim to respond within 72 hours.<br><i class="fa-solid fa-gamepad"></i></h4>
 </div>
 <div>
-    <h5>Send Us A Message! <i class="fa-solid fa-envelope-open-text"></i></h6>
+    <h5>Send Us A Message!<br><i class="fa-solid fa-envelope-open-text"></i></h6>
 </div>
 <form>
-    <label for="fullname">Full Name:</label><br>
-    <input type="text" id="fullname" name="fullname" placeholder="First Name*" required pattern=".*\S+.*"><br>
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="First Name*" autocomplete="given-name" required pattern=".*\S+.*"><br>
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname" placeholder="Last Name*" autocomplete="family-name" required pattern=".*\S+.*"><br>
     <label for="email">Email Address:</label><br>
-    <input type="email" id="email" name="email" placeholder="example@example.com*" required pattern=".*\S+.*"><br>
+    <input type="email" id="email" name="email" placeholder="example@example.com*" autocomplete="email" required pattern=".*\S+.*"><br>
     <label for="subject">Subject:</label><br>
     <input type="text" id="subject" name="subject" placeholder="Subject*" required pattern=".*\S+.*"><br>
     <label for="message">Your Message:</label><br>
-    <textarea name="message" id="message" placeholder="Tell me more...*" rows="10" cols="40" required pattern=".*\S+.*"></textarea>
+    <textarea name="message" id="message" placeholder="Tell me more...*" rows="10" cols="40" autocomplete="off" required pattern=".*\S+.*"></textarea>
     <div class="form-buttons">
         <input type="submit" value="Submit" class="submit-button">
         <input type="reset" value="Clear Form" class="reset-button">
