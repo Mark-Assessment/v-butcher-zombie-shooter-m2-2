@@ -32,10 +32,6 @@ body {
   padding-top: 1rem;
 }
 
-.navbar-nav li {
-  padding-left: 2rem;
-}
-
 nav {
   background: #c785ec;
   border-bottom: double 3px #8549a7;
@@ -51,9 +47,17 @@ nav {
   background-color: #deb7ff;
 }
 
+.navbar-nav li {
+  padding-left: 2rem;
+}
+
 .nav-link {
   text-decoration: none;
   color: black;
+}
+
+.navbar .nav-link:hover{
+  border-bottom: 2px solid black;
 }
 
 /*----------------------------------------------- Home Page */
@@ -298,6 +302,12 @@ footer {
   color: white;
   margin: 1rem;
   font-size: 0.8rem;
+}
+
+/*----------------------------------------------- Contact Us Page */
+
+#fullname, #subject, #email, #message {
+  border-radius: 10px;
 }
 
 /*--------------------------------------------Media Queries*/
