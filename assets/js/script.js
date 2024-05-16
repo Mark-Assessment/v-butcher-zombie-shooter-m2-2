@@ -30,14 +30,15 @@ function randomGrave(graves) {
     return grave;
 }
 
-// function adding a click event to start button for user to initiate the game
+// function adding a click event to start button for user to initiate the game with warning pop up message
 function startGame() {
     Swal.fire({
         title: "Warning!",
         text: "This game contains loud sound! Make sure your volume is at an appropriate level",
-        icon: "warning"
-    });
-    setTimeout((startGame) => {
+        icon: "warning",
+        allowOutsideClick: false,
+    }).then(() => {
+    setTimeout(() => {
     scoreBoard.textContent = 0;
     timeUp = false;
     score = 0;
@@ -45,8 +46,9 @@ function startGame() {
     popUp();
     setTimeout(() => {
         timeUp = true;
-    }, 20000);
-    }, 2000);
+            }, 20000);
+        }, 2000);
+    });
 }
 
 // function for the zombie to 'pop up' using randomTime and randomGrave functions and stops when time is up
@@ -121,11 +123,19 @@ function displayDifficulty(difficulty) {
 
 function gameOver() {
     if(timeUp) {
+        if(score > 0) {
         Swal.fire({
             title: "Winner!",
             text: "You got " + score + " Points!",
             icon: "success"
           });
+        } else {
+            Swal.fire({
+                title: "Bad Luck!",
+                text: "You didn't score any points!",
+                icon: "error"
+            });
+        }
     }
 }
 

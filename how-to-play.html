@@ -12,37 +12,25 @@
 </head>
 <body>
   <header>
-    <!-- Nav bar with title, and links to how to play page and leaderboard -->
+    <!-- Nav bar with title, and links to how to play and contact us pages with hamburger menu -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <a class="navbar-brand title" href="index.html">Zombie Shooter<p class="tagline">By DeadPixel Games</p></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="how-to-play.html">How To Play</a>
+              <a class="nav-link" href="how-to-play.html">How To Play <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-            <!-- Button to open modal for leaderboard scores-->
-              <button id="open-modal" class="leaderboard" onclick="leaderboard()">Leaderboard</button>
+              <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
           </ul>
-            <!-- Modal for leaderboard-->
-            <div id="modal-container-leaderboard" class="">
-              <div id="modal-content-leaderboard">
-                <h2>Leaderboard</h2>
-                  <div class="leaderboard">
-                      
-                
-                    <button id="close-modal" class="btn">Close</button>
-                  </div>
-              </div>
-            </div>
         </div>
       </div>
     </nav>
@@ -65,7 +53,7 @@
     <div class="instructions-container">
       <img src="/assets/images/screenshots/start.png" class="screenshot" alt="screenshot of start button">
       <p class="instruction-text">
-        Click this button to start the game, there is an alert message to tell you about the loud gun shot sound that features in the game,
+        Click this button to start the game; reset the score and time. There is an alert message to tell you about the loud gun shot sound that features in the game,
         there is a 2 second delay to allow you to return to the game area and then get ready to shoot some Zombies!
       </p>
     </div>
@@ -79,12 +67,6 @@
       <img src="/assets/images/screenshots/dark-mode.png" class="screenshot" alt="screenshot of button to toggle dark mode">
       <p class="instruction-text">
         This button will toggle from the colours you see when the page loads, to a dark mode.
-    </div>
-    <div class="instructions-container">
-      <img src="/assets/images/screenshots/leaderboard-button.png" class="screenshot" alt="screenshot of leaderboard button">
-      <p class="instruction-text">
-        By clicking this button, you can view the leaderboard. You also have the option to save your name and score at the end of a game.
-      </p>
     </div>
   </div>
   <footer>© veebee4 2024</footer>

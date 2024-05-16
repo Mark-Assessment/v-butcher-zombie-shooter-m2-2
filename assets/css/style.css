@@ -3,23 +3,140 @@
 /*----------------------------------------------- Special paddings/margins/text */
 
 html {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
   
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 /*----------------------------------------------- Body */
 
 body {
-    background-color: #634087;
-    padding: 0;
-    margin: 0;
-    font-family: Rubik, sans-serif;
+  background-color: #634087;
+  padding: 0;
+  margin: 0;
+  font-family: Rubik, sans-serif;
 }
 
-/*----------------------------------------------- Dark Mode */
+/*----------------------------------------------- Nav */
+
+.navbar-brand {
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.tagline {
+  font-size: 0.5em;
+  font-weight: 400;
+  padding-top: 1rem;
+}
+
+.navbar-nav li {
+  padding-left: 2rem;
+}
+
+nav {
+  background: #c785ec;
+  border-bottom: double 3px #8549a7;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-toggler {
+  background-color: #a86add;
+  border: 0.5px solid #634087;
+}
+
+.navbar-toggler:hover {
+  background-color: #deb7ff;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+/*----------------------------------------------- Home Page */
+/*----------------------------------------------- Game Area */
+  
+.game-board {
+  width: 19rem;
+  height: 19rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem auto;
+  cursor: crosshair; /* changes cursor to crosshair when mouse is over the game board*/
+}
+  
+.grave {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+  
+.grave:after {
+  display: block;
+  background: url('../images/headstone.png') bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height: 4rem;
+  position: absolute;
+  bottom: -10px;
+}
+  
+.zombie {
+  background: url('../images/zombie.png') bottom center no-repeat;
+  background-size: 160%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+  
+/* adjusts position of zombie when it transitions up so the right amount shows */
+.grave.up .zombie {
+  top: -10%;
+}
+
+/*----------------------------------------------- Controls Area */
+
+.control-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.score-board, .timer {
+  text-align: center;
+  background-color: #deb7ff;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.control-buttons {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+  align-self: center;
+}
+
+.start, .difficulty, .dark-light-mode {
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #a86add;
+  color: black;
+  border-radius: 10px;
+}
+
+.start:hover, .difficulty:hover, .dark-light-mode:hover {
+  background-color: #deb7ff;
+}
+
+/*------------------------------------ Dark Mode Button Changes to Styling*/
 
 .dark-mode {
   background-color: black;
@@ -74,288 +191,116 @@ body {
   color:#deb7ff;
 }
 
-/*----------------------------------------------- Nav */
+/*----------------------------------------------- Choose Your Difficulty Modal */
+/* adapted from tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I
 
-.navbar-brand {
-    font-weight: 900;
-    font-size: 1.5em;
+/* Modal covers the entire screen and centers the box containing buttons to select difficulty */
+#modal-container-difficulty {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 1;
 }
 
-.tagline {
-  font-size: 0.5em;
-  font-weight: 400;
+/* Changed the modal opacity to be visible */
+#modal-container-difficulty.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* styling content within the modal */
+#modal-content-difficulty {
+  max-width: 80%;
+  border: 5px double #634087;
+  border-radius: 10px;
+  box-shadow: 3px 7px 10px rgba(255, 255, 255, 0.4);
+  padding: 2rem;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+/* styling div holding buttons */
+.difficulty-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.skillbtn {
+  border-radius: 10px;
+  background-color: #634087;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+#close-modal2 {
+  background-color: #c785ec;
+  border: #634087;
+  margin: 1rem;
+}
+
+  
+/* Footer */
+footer {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 1rem;
 }
 
-.navbar-nav li {
-    padding-left: 2rem;
-}
+/*----------------------------------------------- How To Play Page */
 
-nav {
-    background: #c785ec;
-    border-bottom: double 3px #8549a7;
-    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
-}
-
-.navbar-toggler {
-    background-color: #a86add;
-    border: 0.5px solid #634087;
-}
-
-.navbar-toggler:hover {
-    background-color: #deb7ff;
-}
-
-.nav-link {
+.instructions-header {
+  text-align: center;
+  font-weight: 900;
+  margin: 2rem;
   text-decoration: underline;
-  color: black;
+  color: white;
+  font-size: 3rem;
 }
 
-button#open-modal.leaderboard {
-  border-radius: 10px;
-  border: none;
-  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
-  background-color: #a86add;
-  padding: 0.8em;
-  margin-top: 0.5rem;
-  margin-right: 1rem;
+.instructions-container {
+  border: 3px double white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-/*----------------------------------------------- Home Page */
-/*----------------------------------------------- Game Area */
-  
-  .game-board {
-    width: 19rem;
-    height: 19rem;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 3rem auto;
-    cursor: crosshair; /* changes cursor to crosshair when mouse is over the game board*/
-  }
-  
-  .grave {
-    flex: 1 0 33.33%;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .grave:after {
-    display: block;
-    background: url('../images/headstone.png') bottom center no-repeat;
-    background-size: contain;
-    content: '';
-    width: 100%;
-    height: 4rem;
-    position: absolute;
-    bottom: -10px;
-  }
-  
-  .zombie {
-    background: url('../images/zombie.png') bottom center no-repeat;
-    background-size: 160%;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    height: 100%;
-    transition: all 0.4s;
-  }
-  
-  /* adjusts position of zombie when it transitions up so the right amount shows */
-  .grave.up .zombie {
-    top: -10%;
-  }
+.game-screenshot {
+  height: 20rem;
+  width: 20rem;
+}
 
-  /*----------------------------------------------- Controls Area */
+.screenshot {
+  margin-top: 1rem;
+}
 
-  .control-area {
-    display: flex;
-    flex-direction: column;
-  }
+.time-score-screenshot {
+  margin-top: 1rem;
+  width: 70%;
+}
 
-  .score-board, .timer {
-    text-align: center;
-    background-color: #deb7ff;
-    border-radius: 10px;
-    padding: 0.5rem;
-    margin: 0.5rem;
-  }
+.instruction-text {
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  margin: 1rem;
+  font-size: 0.8rem;
+}
 
-  .control-buttons {
-    display: flex;
-    width: 70%;
-    justify-content: center;
-    flex-direction: column;
-    align-items: stretch;
-    align-self: center;
-  }
-
-  .start, .difficulty, .dark-light-mode {
-    margin: 0.5em;
-    padding: 0.5em;
-    background-color: #a86add;
-    color: black;
-    border-radius: 10px;
-  }
-
-  .start:hover, .difficulty:hover, .dark-light-mode:hover {
-    background-color: #deb7ff;
-  }
-
-  /*----------------------------------------------- Choose Your Difficulty Modal */
-  /* adapted from tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I
-
- /* Modal covers the entire screen and centers the box containing buttons to select difficulty */
-  #modal-container-difficulty {
-    /*box-sizing: border-box;*/
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease;
-    z-index: 1;
-  }
-
-  /* Changed the modal opacity to be visible */
-  #modal-container-difficulty.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  /* styling content within the modal */
-  #modal-content-difficulty {
-    max-width: 80%;
-    border: 5px double #634087;
-    border-radius: 10px;
-    box-shadow: 3px 7px 10px rgba(255, 255, 255, 0.4);
-    padding: 2rem;
-    color: white;
-    text-align: center;
-    z-index: 1;
-  }
-
-  /* styling div holding buttons */
-  .difficulty-buttons {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .skillbtn {
-    border-radius: 10px;
-    background-color: #634087;
-    color: white;
-    font-size: 1.2rem;
-    padding: 0.5rem;
-  }
-
-  #close-modal2 {
-    background-color: #c785ec;
-    border: #634087;
-    margin: 1rem;
-  }
-
-  /*----------------------------------------------- Leaderboard Modal */
-  /* adapted from tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I */
-
-  #modal-container-leaderboard {
-    /*box-sizing: border-box;*/
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease;
-    z-index: 1;
-  }
-
-  /* Changed the modal opacity to be visible */
-  #modal-container-leaderboard.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  /* styling content within the modal */
-  #modal-content-leaderboard {
-    max-width: 80%;
-    border: 5px double #634087;
-    border-radius: 10px;
-    box-shadow: 3px 7px 10px rgba(255, 255, 255, 0.4);
-    padding: 2rem;
-    color: white;
-    text-align: center;
-    z-index: 1;
-  }
-
-  #close-modal2 {
-    background-color: #c785ec;
-    border: #634087;
-    margin: 1rem;
-  }
-
-
-  /* Footer */
-  footer {
-    color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1rem;
-  }
-
-  /*----------------------------------------------- How To Play Page */
-
-  .instructions-header {
-    text-align: center;
-    font-weight: 900;
-    margin: 2rem;
-    text-decoration: underline;
-    color: white;
-    font-size: 3rem;
-  }
-
-  .instructions-container {
-    border: 3px double white;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .game-screenshot {
-    height: 20rem;
-    width: 20rem;
-  }
-
-  .screenshot {
-    margin-top: 1rem;
-  }
-
-  .time-score-screenshot {
-    margin-top: 1rem;
-    width: 70%;
-  }
-
-  .instruction-text {
-    text-align: center;
-    font-weight: 600;
-    color: white;
-    margin: 1rem;
-    font-size: 0.8rem;
-  }
-
-  /*--------------------------------------------Media Queries*/
+/*--------------------------------------------Media Queries*/
 
 /*------- For Tablet screens */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -401,10 +346,6 @@ button#open-modal.leaderboard {
   .nav-link {
     font-size: 1.2rem;
     font-weight: 600;
-  }
-
-  button#open-modal.leaderboard {
-    margin-top: 0;
   }
 
   /*------- Game Area */
@@ -460,10 +401,6 @@ button#open-modal.leaderboard {
   .nav-link {
     font-size: 1.2rem;
     font-weight: 600;
-  }
-
-  button#open-modal.leaderboard {
-    margin-top: 0;
   }
 
   /*------- Game Area */
@@ -528,10 +465,6 @@ button#open-modal.leaderboard {
   .nav-link {
     font-size: 1.2rem;
     font-weight: 600;
-  }
-
-  button#open-modal.leaderboard {
-    margin-top: 0;
   }
 
   /*------- Game Area */
