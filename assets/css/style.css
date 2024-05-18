@@ -68,7 +68,20 @@ nav {
 }
 
 .navbar .nav-link:hover{
-  border-bottom: 2px solid black;
+  font-weight: 800;
+}
+
+/*----------------------------------------------- Footer */
+
+footer {
+  color: black;
+  margin-top: auto;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.footer-thankyou {
+  margin-top: 12rem;
 }
 
 /*----------------------------------------------- Home Page */
@@ -264,16 +277,6 @@ nav {
   margin: 1rem;
 }
 
-  
-/* Footer */
-footer {
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 1rem;
-}
-
 /*----------------------------------------------- How To Play Page */
 
 .instructions-header {
@@ -366,6 +369,7 @@ h5 {
 
 #fname, #lname, #subject, #email, #message {
   border-radius: 10px;
+  border: 3px solid black;
   margin-left: 1rem;
   margin-right: 1rem;
   padding: 0.4rem;
@@ -385,6 +389,8 @@ h5 {
   color: black;
   text-transform: uppercase;
   font-weight: 500;
+  border: 1px solid black;
+  box-shadow: 2px 5px 5px rgba(0,0,0,0.5);
 }
 
 .reset-button:hover, .submit-button:hover {
@@ -396,6 +402,19 @@ h6 {
   text-align: center;
   color: white;
   font-weight: 200;
+}
+
+/*----------------------------------------------- Thankyou Page */
+
+.thankyou {
+  padding: 5rem;
+}
+
+.thankyou-text {
+  padding: 1rem;
+  color: white;
+  font-weight: 400;
+  text-align: center;
 }
 
 /*--------------------------------------------Media Queries*/
@@ -543,11 +562,6 @@ h6 {
     margin: 1rem auto;
   }
 
-  /*------- Footer */
-  footer {
-    padding-top: 15rem;
-  }
-
   /*------- How to play Page */
 
   .game-screenshot {
@@ -582,6 +596,14 @@ h6 {
     width: 10%;
   }
 
+  /*------- Thank You Page */
+  .thankyou {
+    font-size: 3rem;
+  }
+
+  .thankyou-text {
+    font-size: 2rem;
+  }
 }
 
 /*------- For Desktop screens */
@@ -627,11 +649,6 @@ h6 {
     margin: 0.5rem auto;
   }
 
-  /*------- Footer */
-  footer {
-    padding-top: 15rem;
-  }
-
   /*------- How to play Page */
 
   .game-screenshot {
@@ -663,5 +680,20 @@ h6 {
 
   .reset-button, .submit-button {
     width: 10%;
+  }
+
+  /*------- Thank You Page */
+  .thankyou {
+    padding-top: 10rem;
+    font-size: 4rem;
+  }
+
+  .thankyou-text {
+    font-size: 2.5rem;
+  }
+
+  /*------- Footer */
+  footer {
+    font-size: 1.8rem;
   }
 }
