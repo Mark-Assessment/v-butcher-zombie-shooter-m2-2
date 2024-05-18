@@ -340,6 +340,15 @@ h4 {
 h5 {
   text-align: center;
   color: white;
+  padding-bottom: 1rem;
+}
+
+.page-break {
+  width: 60%;
+  margin: auto;
+  border-width: 5px;
+  border-style: double;
+  color: black;
 }
 
 .contact-form {
@@ -383,7 +392,7 @@ h5 {
 }
 
 h6 {
-  margin: 1rem;
+  margin: 2rem;
   text-align: center;
   color: white;
   font-weight: 200;
@@ -404,7 +413,7 @@ h6 {
     top: 10%;
   }
 
-  /*------- Control area with game buttons */
+  /*------- Control Area With Game Buttons */
   .control-area {
     padding-top: 2rem;
   }
@@ -414,9 +423,19 @@ h6 {
     margin: 1rem auto;
   }
 
-  /*------- How to play Page */
+  /*------- How To Play Page */
   .time-score-screenshot {
     width: 50%;
+  }
+
+  /*------- Contact Us Page */
+  #fname, #lname, #subject, #email, #message {
+    width: 60%;
+    align-self: center;
+  }
+
+  .reset-button, .submit-button {
+    width: 20%;
   }
 }
 
@@ -472,6 +491,16 @@ h6 {
 
   .instruction-text {
     font-size: 1rem;
+  }
+
+  /*------- Contact Us Page */
+  #fname, #lname, #subject, #email, #message {
+    width: 60%;
+    align-self: center;
+  }
+
+  .reset-button, .submit-button {
+    width: 20%;
   }
 }
 
@@ -537,6 +566,22 @@ h6 {
   .screenshot {
     width: 40%;
   }
+
+  /*------- Contact Us Page */
+
+  .page-break {
+    width: 30%;
+  }
+  
+  #fname, #lname, #subject, #email, #message {
+    width: 40%;
+    align-self: center;
+  }
+
+  .reset-button, .submit-button {
+    width: 10%;
+  }
+
 }
 
 /*------- For Desktop screens */
@@ -604,5 +649,19 @@ h6 {
 
   .screenshot {
     width: 30%;
+  }
+
+  /*------- Contact Us Page */
+  .page-break {
+    width: 20%;
+  }
+  
+  #fname, #lname, #subject, #email, #message {
+    width: 40%;
+    align-self: center;
+  }
+
+  .reset-button, .submit-button {
+    width: 10%;
   }
 }
