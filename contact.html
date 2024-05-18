@@ -25,13 +25,13 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="how-to-play.html">How To Play</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="contact.html">Contact Us <span class="sr-only">(current)</span></a>
             </li>
           </ul>
             </div>
@@ -47,19 +47,19 @@
 <div>
     <h5>Send Us A Message!<br><i class="fa-solid fa-envelope-open-text"></i></h6>
 </div>
-<form>
-    <label for="fname">First Name:</label><br>
+<form class="contact-form">
+    <label for="fname" class="form-label">First Name:</label><br>
     <input type="text" id="fname" name="fname" placeholder="First Name*" autocomplete="given-name" required pattern=".*\S+.*"><br>
-    <label for="lname">Last Name:</label><br>
+    <label for="lname" class="form-label">Last Name:</label><br>
     <input type="text" id="lname" name="lname" placeholder="Last Name*" autocomplete="family-name" required pattern=".*\S+.*"><br>
-    <label for="email">Email Address:</label><br>
+    <label for="email" class="form-label">Email Address:</label><br>
     <input type="email" id="email" name="email" placeholder="example@example.com*" autocomplete="email" required pattern=".*\S+.*"><br>
-    <label for="subject">Subject:</label><br>
+    <label for="subject" class="form-label">Subject:</label><br>
     <input type="text" id="subject" name="subject" placeholder="Subject*" required pattern=".*\S+.*"><br>
-    <label for="message">Your Message:</label><br>
+    <label for="message" class="form-label">Your Message:</label><br>
     <textarea name="message" id="message" placeholder="Tell me more...*" rows="10" cols="40" autocomplete="off" required pattern=".*\S+.*"></textarea>
     <div class="form-buttons">
-        <input type="submit" value="Submit" class="submit-button">
+        <input type="submit" value="Submit" class="submit-button" action="thankyou.html">
         <input type="reset" value="Clear Form" class="reset-button">
     </div> 
 </form>
