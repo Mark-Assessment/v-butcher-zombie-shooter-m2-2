@@ -134,6 +134,7 @@ footer {
 .control-area {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .user-info {
@@ -148,11 +149,13 @@ footer {
   width: 90%;
   margin: auto;
   border: 5px solid #a86add;
+  padding: 0.2rem;
 }
 
 .time-heading, .score-heading {
   font-weight: 700;
   font-size: 1rem;
+  margin-bottom: 0;
 }
 
 span {
@@ -457,7 +460,7 @@ h6 {
 
   .score-board, .timer {
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
   }
   
   .control-buttons {
@@ -531,6 +534,10 @@ h6 {
   .control-buttons {
     width: 30%;
   }
+
+  span {
+    font-size: 1rem;
+  }
   
   .start, .difficulty, .dark-light-mode {
     padding: 1rem;
@@ -602,20 +609,29 @@ h6 {
   }
 
   .score-board, .timer {
-    width: 130%;
+    width: 150%;
     padding: 1.5rem;
   }
   
   .control-buttons {
-    width: 40%;
+    width: 25%;
   }
-  
-  .start, .difficulty, .dark-light-mode {
-    padding: 1.3rem;
+
+  button {
+    font-size: 1.4rem;
+    font-weight: 500;
   }
 
   .time-heading, .score-heading {
     font-size: 1.2rem;
+  }
+
+  span {
+    font-size: 1.2rem;
+  }
+
+  .start, .difficulty, .dark-light-mode {
+    padding: 1.3rem;
   }
 
   /*------- How to play Page */
@@ -697,12 +713,34 @@ h6 {
 
   /*------- Control area with game buttons */
   .control-area {
-    padding-top: 1rem;
+    padding-top: 2rem;
+    justify-content: space-evenly;
   }
 
-  .timer, .score-board, .control-buttons {
-    width: 80%;
-    margin: 0.5rem auto;
+  .score-board, .timer {
+    width: 150%;
+    padding: 1.5rem;
+  }
+  
+  .control-buttons {
+    width: 30%;
+  }
+
+  button {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  .time-heading, .score-heading {
+    font-size: 1.4rem;
+  }
+
+  span {
+    font-size: 1.7rem;
+  }
+
+  .start, .difficulty, .dark-light-mode {
+    padding: 1.3rem;
   }
 
   /*------- How to play Page */

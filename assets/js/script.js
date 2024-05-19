@@ -100,7 +100,7 @@ function shoot(e) {
 }
 
 // function to show modal for user to select/change difficulty setting
-/*function changeDifficulty() {
+function changeDifficulty() {
     const difficultyBtn = document.getElementsByClassName('difficulty');
     const openModalDifficulty = document.getElementById('open-modal2');
     const closeModalDifficulty = document.getElementById('close-modal2');
@@ -119,7 +119,7 @@ function shoot(e) {
 
 function displayDifficulty(difficulty) {
         alert(`Difficulty set to ${difficulty}.`);
-    }*/
+    }
 
 function gameOver() {
     if(timeUp) {
@@ -163,25 +163,3 @@ zombies.forEach((zombie) => {
         audio.play();
     });
 });
-  
-
-// Event listeners to set times for the difficulty levels when the user clicks the button
-/*document.getElementById('easyBtn').addEventListener('click', () => {
-    const time = popUpDuration('easy');
-    displayDifficulty('easy');
-});
-
-document.getElementById('normalBtn').addEventListener('click', () => {
-    const time = popUpDuration('normal');
-    displayDifficulty('normal');
-});
-
-document.getElementById('hardBtn').addEventListener('click', () => {
-    const time = popUpDuration('hard');
-    displayDifficulty('hard');
-});
-
-document.getElementById('superHardBtn').addEventListener('click', () => {
-    const time = popUpDuration('superhard');
-    displayDifficulty('superhard');
-});*/
