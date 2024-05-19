@@ -57,11 +57,11 @@ This shooting game is based on a whack-a-mole game setup and has been made to be
 - #### Returning Visitor Goals
 
   1. As a returning visitor, I want to be able to change the difficulty.
-  2. As a returning visitor, I would like the option to save my score to a leaderboard, to see how well I score against others or to keep a log of my own score.
 
 - #### Frequent Visitor Goals
 
   1. As a frequent visitor, I would like to change the theme/characters in the game.
+  2. As a returning visitor, I would like the option to save my score to a leaderboard, to see how well I score against others or to keep a log of my own score.
 
 ---
 
@@ -71,7 +71,7 @@ This shooting game is based on a whack-a-mole game setup and has been made to be
 
   For this project, I have chosen a palette of purples which fit with the spooky theme of zombies but is also pleasing to the eye and provides enough contrast between all the features to ensure the user has a pleasant time playing the game.
   The navigation bar is a lighter shade of purple, with a darker border at the bottom to really distinguish between the navigation element and the body of the page. Once the user is on a smaller screen size than laptop size, the navigation toggler button appears and this has been assigned a darker colour than the navigation bar so the user can distinguish where the button is. There is also a dark mode so the user can make the colours of the game page, darker. All buttons and menus have a black text colour as the purple on these elements are lighter than the background and this still provides enough contrast. On the How To Play page however, I have had to change the colour of all text on the page to be white to provide enough contrast for the user.
-  I have put a colours section in my CSS so if anything needs to be adjusted or changed, it would be quick and easy to do.
+
 
 | Website Element                   | Colour           |
 | --------------------------------- |:----------------:|
@@ -104,9 +104,9 @@ This shooting game is based on a whack-a-mole game setup and has been made to be
 
 - #### Wireframes
 
-  - Home Page Wireframes [Desktop](/documentation/wireframes/home-desktop.png) [Mobile](/documentation/wireframes/home-mobile.png) [Tablet] (/documentation/wireframes/home-tablet.png)
+  - Home Page Wireframes [Desktop](/documentation/wireframes/home-desktop.png) [Tablet](/documentation/wireframes/home-tablet.png) [Mobile](/documentation/wireframes/home-mobile.png)
   - How To Play Wireframe [Desktop](/documentation/wireframes/how-to-play.png)
-  - Leaderboard [Desktop](/documentation/wireframes/leaderboard-desktop.png) [Mobile] (/documentation/wireframes/leaderboard-mobile.png)
+  - Contact Us Wireframe [Desktop](/documentation/wireframes/contact-us-desktop.png) [Tablet](/documentation/wireframes/contact-us-tablet.png) [Mobile](/documentation/wireframes/contact-us-mobile.png)
 
 ## Technology Used
 
@@ -119,15 +119,15 @@ The website comprises of a homepage, where the main game element is contained, a
 - Responsive on all devices, using a mobile first approach.
 ![Mobile, tablet & desktop view]()
 
-- Interactive Menus and links on both pages.
-![Menu]()
-![Links]()
+- Resonsive & Interactive Menu/Toggler and links on all pages.
+![Menu Toggler](/assets/images/screenshots/nav-toggler.png)
+![Menu Links](/assets/images/screenshots/nav-link.png)
 
 - Text logo on the nav element that also acts as a link back to the home page.
-![Text Logo]()
+![Text Logo](/assets/images/screenshots/banner.png)
 
 - User feedback on button(s) on the navigation element and below the game when hovered over.
-![Hover Over Button]()
+![Hover Over Button](/assets/images/screenshots/button-hover.png)
 
 
 #### Future Implementations
@@ -137,12 +137,15 @@ For future implementations I would like to:
 1. Be able to introduce a harmless/victim character that would deduct points if clicked on/shot.
 2. Following the above, it would be good to be able to have another character which is special and gains more points when clicked on/shot.
 3. Be able to let the user change the theme of the game - this could not be done due to time constraints and skill level.
+4. Add more intricacy to the difficulty setting so that it also changes the timings of the zombies popping up - this could not be done due to skill level and time constraints.
+5. Add a leaderboard where the user can add and save their own score, and view others.
 
 ### Accessibility
 
 I have been trying to make the project and website as accessible as possible. I have been doing this by:
 
 * Using semantic HTML.
+* Adding sr-only to the menu links so that screen readers know which page they are on.
 * Applying the hover element on all buttons and the navigation toggler button (hamburger menu) on the site so that the user is aware they are hovering over a button.
 * Ensuring that there is a enough colour contrast throughout the site and the background does not distract from the game or content.
 * Displaying appropriate title on page tab, so users can easily see where they are on the site, just by looking at the tab.
@@ -217,11 +220,15 @@ To clone the repository:
 
 | No   | Bug  | How I solved the issue |
 | :--- | :--- | :--- |
-| 1 | After reading that Bootstrap was not required for this project on the Slack channels I was trying to work without the bootstrap framework and found it extremely difficult to code a completely HTML and CSS hamburger menu ![CSS hamburger menu not working properly](/documentation/testing/css-hamburger-bug.png)| After speaking with my tutor, she suggested that I could use the bootstrap framework just for the menu and that would be acceptable for the project, I read the documentation on the Bootstrap navigation element and implemented this into my site |
+| 1 | I tried to implement a custom crosshair cursor | I tried several different .png files which were different sizes, but none worked. As this is not a majorly important part of the project, I opted for the system crosshair cursor which works well |
 | 2 | For the contact page, I wanted a map to be at the bottom of the content on that page and also for it to be responsive, I had placed an embedded map but it was only one size and did not look good within other device sizes | I typed my query into google and found a good [tutorial](https://www.w3schools.com/howto/howto_css_responsive_iframes.asp) on W3 schools which showed how to style the class for the map|
 | 3 | The font for the navigation links would not change to the particular font I wanted | I researched this and managed to find [this article](https://forum.squarespace.com/topic/253132-custom-css-not-overriding-font-styles-site-nav-links/) where I learnt about the !important attribute and fixed this issue. This attribute was then used for other elements |
 
 ### Known Bugs
+
+* When testing the game, I noticed that you could click on the same zombie more than once and gain extra points. If I had more time on this project, I would look to write extra JavaScript code to solve these issues.
+
+* The user is able to click the start button multiple times (dismissing the pop up each time) and multiple sets of zombies pop up from behind the headstones. With more time and knowledge, I would look to fix this bug.
 
 * When testing was carried out on an Iphone 12 mobile, the booking in form does not display correctly; the title is off center, the checkbox is left aligned for some reason and users have to scroll to the right slightly to view the end of the text box. This is all displayed correctly when viewing on a desktop and reducing the screen size either just through the browser or through devtools.
 
