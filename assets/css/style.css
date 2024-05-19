@@ -158,10 +158,6 @@ footer {
   margin-bottom: 0;
 }
 
-span {
-  font-size: 0.8rem;
-}
-
 .control-buttons {
   display: flex;
   width: 50%;
@@ -534,10 +530,6 @@ h6 {
   .control-buttons {
     width: 30%;
   }
-
-  span {
-    font-size: 1rem;
-  }
   
   .start, .difficulty, .dark-light-mode {
     padding: 1rem;
@@ -623,10 +615,6 @@ h6 {
   }
 
   .time-heading, .score-heading {
-    font-size: 1.2rem;
-  }
-
-  span {
     font-size: 1.2rem;
   }
 
@@ -733,10 +721,6 @@ h6 {
 
   .time-heading, .score-heading {
     font-size: 1.4rem;
-  }
-
-  span {
-    font-size: 1.7rem;
   }
 
   .start, .difficulty, .dark-light-mode {
