@@ -25,7 +25,6 @@ function randomGrave(graves) {
     const idx = Math.floor(Math.random() * graves.length);
     const grave = graves[idx];
     if(grave === lastGrave) {
-        console.log("Oops same grave!");
         return randomGrave(graves);
     }
     lastGrave = grave;
@@ -58,7 +57,7 @@ function startGame() {
 
 // function for the zombie to 'pop up' using randomTime and randomGrave functions and stops when time is up
 function popUp() {
-    const time = randomTime(500, 1000);
+    const time = randomTime(300, 1000);
     const grave = randomGrave(graves);
     grave.classList.add('up');
     setTimeout(() => {

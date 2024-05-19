@@ -197,10 +197,12 @@ footer {
 
 .dark-mode .timer {
   background-color: #8549a7;
+  color: black;
 }
 
 .dark-mode .score-board {
   background-color: #8549a7;
+  color: black;
 }
 
 .dark-mode .start {
@@ -313,17 +315,18 @@ footer {
 }
 
 .game-screenshot {
-  height: 20rem;
-  width: 20rem;
+  height: 50%;
+  width: 50%;
 }
 
 .screenshot {
   margin-top: 1rem;
+  width: 50%;
 }
 
 .time-score-screenshot {
   margin-top: 1rem;
-  width: 70%;
+  width: 50%;
 }
 
 .instruction-text {
@@ -469,7 +472,11 @@ h6 {
 
   /*------- How To Play Page */
   .time-score-screenshot {
-    width: 50%;
+    width: 40%;
+  }
+
+  .screenshot {
+    width: 40%;
   }
 
   /*------- Contact Us Page */
@@ -537,17 +544,16 @@ h6 {
 
   /*------- How to play Page */
 
-  .game-screenshot {
-    height: 30rem;
-    width: 30rem;
-  }
-
   .time-score-screenshot {
-    width: 50%;
+    width: 30%;
   }
 
   .instruction-text {
     font-size: 1rem;
+  }
+
+  .screenshot {
+    width: 30%;
   }
 
   /*------- Contact Us Page */
@@ -624,13 +630,8 @@ h6 {
 
   /*------- How to play Page */
 
-  .game-screenshot {
-    height: 40rem;
-    width: 40rem;
-  }
-
   .time-score-screenshot {
-    width: 50%;
+    width: 30%;
   }
 
   .instruction-text {
@@ -638,7 +639,7 @@ h6 {
   }
 
   .screenshot {
-    width: 40%;
+    width: 30%;
   }
 
   /*------- Contact Us Page */
@@ -729,13 +730,8 @@ h6 {
 
   /*------- How to play Page */
 
-  .game-screenshot {
-    height: 50rem;
-    width: 50rem;
-  }
-
   .time-score-screenshot {
-    width: 40%;
+    width: 30%;
   }
 
   .instruction-text {
