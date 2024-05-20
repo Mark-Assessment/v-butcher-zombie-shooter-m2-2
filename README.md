@@ -1,8 +1,8 @@
 # **Zombie Shooter Game**
 
-![Zombie Shooter Game shown on a variety of screen sizes]()
+![Zombie Shooter Game shown on a variety of screen sizes](/documentation/screenshots/responsive-screenshot.png)
 
-Visit the deployed website: [Zombie Shooter By DeadPixel Games]()
+Visit the deployed website: [Zombie Shooter By DeadPixel Games](https://veebee4.github.io/zombie-shooter/)
 
 ## **Project Description**
 
@@ -42,7 +42,7 @@ This shooting game is based on a whack-a-mole game setup and has been made to be
   * [Acknowledgments](#acknowledgments)
 
 --- 
-![Zombie Shooter Game Banner](/assets/images/screenshots/banner.png)
+![Zombie Shooter Game Banner](/documentation/screenshots/banner.png)
 
 ## User Experience UX
 
@@ -85,6 +85,7 @@ This shooting game is based on a whack-a-mole game setup and has been made to be
 | How To Play Page Text             | White            |
 
 
+
 ![Zombie Shooter Game Colour Scheme](documentation/colour-palette.png)
 
 - #### Typography
@@ -114,21 +115,31 @@ This project is written using HTML, CSS and JavaScript with JQuery in Gitpod. I 
 
 ## Features
 
-The website comprises of a homepage, where the main game element is contained, along with a how to play page and a modal pop-up to display the leaderboard.
+The website comprises of a home page, where the main game element is contained and a modal pop-up to display the difficulty setting, along with a how to play page and contact us page with a form that directs to a thank you page which re-directs to the home page automatically.
 
 - Responsive on all devices, using a mobile first approach.
-![Mobile, tablet & desktop view]()
+![Mobile, tablet & desktop view](/documentation/screenshots/all-screen-sizes.png)
 
-- Resonsive & Interactive Menu/Toggler and links on all pages.
-![Menu Toggler](/assets/images/screenshots/nav-toggler.png)
-![Menu Links](/assets/images/screenshots/nav-link.png)
+- Resonsive & Interactive Menu/Toggler and links on all pages, with feedback on text links which are bold when hovered over.
+![Menu Toggler](/documentation/screenshots/nav-toggler.png)
+![Menu Links](/documentation/screenshots/nav-link.png)
 
 - Text logo on the nav element that also acts as a link back to the home page.
-![Text Logo](/assets/images/screenshots/banner.png)
+![Text Logo](/documentation/screenshots/banner.png)
 
 - User feedback on button(s) on the navigation element and below the game when hovered over.
-![Hover Over Button](/assets/images/screenshots/button-hover.png)
+![Hover Over Button](/documentation/screenshots/button-hover.png)
 
+- Dark mode button so users can make the homepage darker if they prefer.
+![Dark Mode](/documentation/screenshots/dark-mode.png)
+
+- Difficulty button so user can select how easy/hard the game is.
+![Difficulty Settings](/documentation/screenshots/difficulty.png)
+
+- Custom alerts for sound warning, scoring points and no points.
+![Game Start Alert](/documentation/screenshots/game-start-warning.png)
+![Score Alert](/documentation/screenshots/won-points-alert.png)
+![Game Lost Alert](/documentation/screenshots/no-points-alert.png)
 
 #### Future Implementations
 
@@ -147,8 +158,11 @@ I have been trying to make the project and website as accessible as possible. I 
 * Using semantic HTML.
 * Adding sr-only to the menu links so that screen readers know which page they are on.
 * Applying the hover element on all buttons and the navigation toggler button (hamburger menu) on the site so that the user is aware they are hovering over a button.
+* Text logos in the navigation bar, turn bold when user hovers over them.
+* Appropriate titles of pages have been put onto the browser tabs.
 * Ensuring that there is a enough colour contrast throughout the site and the background does not distract from the game or content.
 * Displaying appropriate title on page tab, so users can easily see where they are on the site, just by looking at the tab.
+* Autocomplete added to inputs on contact page form so it is quicker and easier for user to fill out.
 
 ### Languages Used
 
@@ -221,7 +235,7 @@ To clone the repository:
 | No   | Bug  | How I solved the issue |
 | :--- | :--- | :--- |
 | 1 | I tried to implement a custom crosshair cursor | I tried several different .png files which were different sizes, but none worked. As this is not a majorly important part of the project, I opted for the system crosshair cursor which works well |
-| 2 | For the contact page, I wanted a map to be at the bottom of the content on that page and also for it to be responsive, I had placed an embedded map but it was only one size and did not look good within other device sizes | I typed my query into google and found a good [tutorial](https://www.w3schools.com/howto/howto_css_responsive_iframes.asp) on W3 schools which showed how to style the class for the map|
+| 2 | I was having trouble getting the  | I typed my query into google and found a good [tutorial](https://www.w3schools.com/howto/howto_css_responsive_iframes.asp) on W3 schools which showed how to style the class for the map|
 | 3 | The font for the navigation links would not change to the particular font I wanted | I researched this and managed to find [this article](https://forum.squarespace.com/topic/253132-custom-css-not-overriding-font-styles-site-nav-links/) where I learnt about the !important attribute and fixed this issue. This attribute was then used for other elements |
 
 ### Known Bugs
