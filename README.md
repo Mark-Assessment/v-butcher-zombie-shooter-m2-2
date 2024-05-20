@@ -6,7 +6,7 @@ Visit the deployed website: [Zombie Shooter By DeadPixel Games](https://veebee4.
 
 ## **Project Description**
 
-This shooting game is based on a whack-a-mole game setup and has been made to be easy to play for anyone, any age but leans more towards gamers and users with an interest with first person shooter games. I decided to create this kind of game as zombies are one of my interests/obsessions and I thought it would be fun to play.
+This is a shooting game for my Milestone 2 project, it is based on a whack-a-mole game setup by a fictional games company called DeadPixels. This game has been made to be easy to play so the target audience is anyone, of any age, but it does lean more towards the teen age range and up. It would also appeal more to gamers and users with an interest with first person shooter games. I decided to create this kind of game as zombies are one of my interests/obsessions and I thought it would be fun to play.
 
 ## CONTENTS
 
@@ -52,7 +52,7 @@ This shooting game is based on a whack-a-mole game setup and has been made to be
 
   1. As a first time visitor, I want to be able to start the game easily & see how much time I have to do it.
   2. As a first time visitor, I want to have instructions on how to play which are quick and easy to get to.
-  2. As a first time visitor, I would like to see some sort of scoring system to see how well I do.
+  3. As a first time visitor, I would like to see some sort of scoring system to see how well I do.
 
 - #### Returning Visitor Goals
 
@@ -198,12 +198,12 @@ I have been trying to make the project and website as accessible as possible. I 
 
 ### Deployment
 
-The site is deployed using GitHub Pages - [Zombie Shooter Game]().
+The site is deployed using GitHub Pages - [Zombie Shooter Game](https://veebee4.github.io/zombie-shooter/).
 
 To Deploy the site using GitHub Pages:
 
 1. Login (or signup) to Github.
-2. Go to the repository for this project, []().
+2. Go to the repository for this project, [Zombie Shooter Game](https://github.com/veebee4/zombie-shooter).
 3. Click the settings button.
 4. Select pages in the left hand navigation menu.
 5. From the source dropdown select main branch and press save.
@@ -216,7 +216,7 @@ To Deploy the site using GitHub Pages:
 To fork the repository:
 
 1. Log in (or sign up) to Github.
-2. Go to the repository for this project, []()
+2. Go to the repository for this project, [Zombie Shooter Game](https://github.com/veebee4/zombie-shooter)
 3. Click the Fork button in the top right corner.
 
 #### How to Clone
@@ -249,13 +249,16 @@ To clone the repository:
 
 * The user is able to click the start button multiple times (dismissing the pop up each time) and multiple sets of zombies pop up from behind the headstones. With more time and knowledge, I would look to fix this bug.
 
-* When testing was carried out on an Iphone 12 mobile, the time section did not display correctly when the time arrived at "Finished". This could be fixed either by replacing Finished with the same format as the countdown, just showing "0 seconds remaining", or by further research and time to remedy it.
+* When testing was carried out on an iphone 12 mobile, the time section did not display correctly when the time arrived at "Finished". This could be fixed either by replacing Finished with the same format as the countdown, just showing "0 seconds remaining", or by further research and time to remedy it.
 
   <img src="documentation/testing/mobile-screenshot-finished.png" height="500">
 
-* I noticed the border style that I had applied to the menu links, applies itself to the full width on the hamburger menu but on the full desktop menu, the border is only as long as the navigation link word. This could be rectified just by spending further time on the project.
+* Once the timer has finished, the time area displays Time: Finished, which changes the size of the container around it. I would have liked to keep it the 
 
-![Menu bottom border bug](documentation/testing/border-menu-bug.png)
+![Time & Score Area Before](/documentation/testing/time-finished-bug-before.png)
+![Time & Score Area After](/documentation/testing/time-finished-bug.png)
+
+* The gunshot sound added for when a user gets a click on a zombie, comes out at one, loud volume. It would have been good to be able to change this so it starts off quiet and the user can adjust the volume themselves. Instead, I created a warning alert to tell the user so they can adjust their volume prior to the game starting.
 
 - - -
 
@@ -263,21 +266,19 @@ To clone the repository:
 
 ### Code Used
 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
-* 
+* I followed [The Whack-A-Mole tutorial](https://javascript30.com/) and adapted code to suit my project, which got the game set up and the score being logged.
+* I learned about how to code a countdown timer from [this tutorial](https://www.freecodecamp.org/news/how-to-create-a-countdown-timer/) for my time area.
+* My mentor told me about this [Custom Alert Replacement](https://sweetalert2.github.io/) to make the project alerts look more professional.
 
 ### Content
+
+All text content within the project has been written by myself, any images have been taken from royalty free websites and are attributed in the (#imagery) section of the readme.
+I have also used audio of a gunshot sound, obtained from [Pixabay](https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6349).
 
 ### Acknowledgments
 
 I would like to acknowledge the following people:
 
-* 
+* Rachel Furlong - Tutor: For giving great advice and reassurance.
+* Jubril Akolade - Mentor: Providing with great guidance, and helpful tips.
+* ChatGPT - AI: Helping to develop my understanding of JavaScript.
