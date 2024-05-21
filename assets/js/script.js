@@ -7,7 +7,7 @@ const audio = new Audio("assets/audio/shot.mp3");
 let lastGrave;
 let timeUp = false;
 let score = 0;
-let gameDuration = 2000; // sets default game duration to 20 seconds
+let gameDuration = 20000; // sets default game duration to 20 seconds
 let timerInterval;
 
 

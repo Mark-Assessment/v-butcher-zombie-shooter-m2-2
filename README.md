@@ -177,22 +177,26 @@ I have been trying to make the project and website as accessible as possible. I 
 
 ### Frameworks, Libraries & Programs Used
 
-   + [Bootstrap 5.3.2:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-      - Bootstrap was used to create a responsive navigation menu to allow for a hamburger menu once the screen size reduced from desktop/
-   + [Google Fonts:](https://fonts.google.com/)
-      - Google fonts were used by importing the fonts ????????, into the style.css file which has been used on all pages within the project.
-   + [jQuery:](https://jquery.com/)
-      - jQuery comes with Bootstrap and makes the navbar responsive.
-   + [Git](https://git-scm.com/)
-      - The git command was used for version control via the terminal in Gitpod, to commit to Git and Push to GitHub.
-   + [GitHub:](https://github.com/)
-      - GitHub is used to save and store the files and projects code after being pushed from Git.
-   + [Balsamiq:](https://balsamiq.com/)
-      - Balsamiq was used to create wireframes.
-   + [Google Developer Tools](https://developers.google.com/web/tools) 
-      - To troubleshoot and test features, solve issues with responsiveness and styling.
-   + [Am I Responsive?](http://ami.responsivedesign.is/)
-      - To show the website home page image on a range of devices.
+  + [Bootstrap 5.3.2:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+    - Bootstrap was used to create a responsive navigation menu to allow for a hamburger menu once the screen size reduced from desktop/
+  + [Google Fonts:](https://fonts.google.com/)
+    - Google fonts were used by importing the font Rubik, into the style.css file which has been used on all pages within the project.
+  + [Font Awesome:](https://fontawesome.com/icons)
+    - Font Awesome was used for the icon on the dark mode button.
+  + [SweetAlert2:](https://sweetalert2.github.io/)
+    - Sweet Alert 2 was used to have more professional looking alert pop ups.
+  + [jQuery:](https://jquery.com/)
+    - jQuery comes with Bootstrap and makes the navbar responsive.
+  + [Git](https://git-scm.com/)
+    - The git command was used for version control via the terminal in Gitpod, to commit to Git and Push to GitHub.
+  + [GitHub:](https://github.com/)
+    - GitHub is used to save and store the files and projects code after being pushed from Git.
+  + [Balsamiq:](https://balsamiq.com/)
+    - Balsamiq was used to create wireframes.
+  + [Google Developer Tools](https://developers.google.com/web/tools) 
+    - To troubleshoot and test features, solve issues with responsiveness and styling.
+  + [Am I Responsive?](http://ami.responsivedesign.is/)
+    - To show the website home page image on a range of devices.
 
 ## Deployment & Local Development
 
@@ -203,7 +207,7 @@ The site is deployed using GitHub Pages - [Zombie Shooter Game](https://veebee4.
 To Deploy the site using GitHub Pages:
 
 1. Login (or signup) to Github.
-2. Go to the repository for this project, [Zombie Shooter Game](https://github.com/veebee4/zombie-shooter).
+2. Go to the repository for this project, [veebee4/zombie-shooter](https://github.com/veebee4/zombie-shooter).
 3. Click the settings button.
 4. Select pages in the left hand navigation menu.
 5. From the source dropdown select main branch and press save.
@@ -216,7 +220,7 @@ To Deploy the site using GitHub Pages:
 To fork the repository:
 
 1. Log in (or sign up) to Github.
-2. Go to the repository for this project, [Zombie Shooter Game](https://github.com/veebee4/zombie-shooter)
+2. Go to the repository for this project, [veebee4/zombie-shooter](https://github.com/veebee4/zombie-shooter)
 3. Click the Fork button in the top right corner.
 
 #### How to Clone
@@ -224,7 +228,7 @@ To fork the repository:
 To clone the repository:
 
 1. Log in (or sign up) to GitHub.
-2. Go to the repository for this project, []()
+2. Go to the repository for this project, [veebee4/zombie-shooter](https://github.com/veebee4/zombie-shooter)
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
@@ -242,6 +246,7 @@ To clone the repository:
 | 1 | I tried to implement a custom crosshair cursor | I tried several different .png files which were different sizes, but none worked. As this is not a majorly important part of the project, I opted for the system crosshair cursor which works well |
 | 2 | I was having trouble getting the footer to stay at the bottom of the page | I typed my query into google and found an answer of making the body html min-height 100vh, this pushes the footer to the bottom of the page|
 | 3 | The custom alerts I have put into the JavaScript code for the warning, winning points and for no points would not display the icon properly | I researched this and managed to find [this Stack Overflow](https://stackoverflow.com/questions/68581215/sweet-alert-2-icon-does-not-render-properly) where someone had answered that it was a problem with a span, I remembered I had previously applied some css styles to just the span tag, so I removed the css styling. |
+| 4 | The pictures on the how to play page on the deployed website do not display properly represented by a broken picture [broken pictures on how to play page](/documentation/testing/how-to-play-broken-pictures.png)| I inspected the page with Chrome Dev Tools and found by removing the backslash that was infront of the path name, the picture then appeared so I removed all backslashes from the picture file paths. |
 
 ### Known Bugs
 
@@ -253,10 +258,12 @@ To clone the repository:
 
   <img src="documentation/testing/mobile-screenshot-finished.png" height="500">
 
-* Once the timer has finished, the time area displays Time: Finished, which changes the size of the container around it. I would have liked to keep it the 
+* Once the timer has finished, the time area displays Time: Finished, which changes the size of the container around it. More time and knowledge would have been able to fix this issue.
 
 ![Time & Score Area Before](/documentation/testing/time-finished-bug-before.png)
 ![Time & Score Area After](/documentation/testing/time-finished-bug.png)
+
+* There is also a delay between the game starting and the timer starting, it is only very minor but I would have liked to fix it, if I had more time.
 
 * The gunshot sound added for when a user gets a click on a zombie, comes out at one, loud volume. It would have been good to be able to change this so it starts off quiet and the user can adjust the volume themselves. Instead, I created a warning alert to tell the user so they can adjust their volume prior to the game starting.
 
