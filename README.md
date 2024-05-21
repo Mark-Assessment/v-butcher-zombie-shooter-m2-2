@@ -276,6 +276,7 @@ To clone the repository:
 * I followed [The Whack-A-Mole tutorial](https://javascript30.com/) and adapted code to suit my project, which got the game set up and the score being logged.
 * I learned about how to code a countdown timer from [this tutorial](https://www.freecodecamp.org/news/how-to-create-a-countdown-timer/) for my time area.
 * My mentor told me about this [Custom Alert Replacement](https://sweetalert2.github.io/) to make the project alerts look more professional.
+* I added the sr-only attribute to the navigations links, and found this [Stack Overflow](https://stackoverflow.com/questions/19758598/what-is-sr-only-in-bootstrap-3) that gave some example css styling to go with it.
 
 ### Content
 
