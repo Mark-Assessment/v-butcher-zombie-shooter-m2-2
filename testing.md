@@ -55,20 +55,20 @@ To carry out testing, there are two methods; Automated and Manual testing.
         * Once the start button is pressed, an alert pops up to warn the user about the loud sound in the game. The user then has to click the 'start game' button in order to proceed with the game.
         * When the user returns to the game area after closing the alert, there is a two second delay before the game starts and the timer starts counting down the number of seconds left in the game.
     
-    ![User Story 1](documentation/testing/user-stories/user-story-1-screenshot.png)
+    ![User Story 1](/documentation/testing/user-stories/user-story-1-screenshot.png)
 
     2. As a first time visitor, I want to have instructions on how to play which are quick and easy to get to.
       * When the user has loaded the homepage, there is a clear link in the navigation bar, or within the hamburger menu called "How To Play".
       * Once the user clicks this link, they are taken to the how to play page where all instructions for the game and all buttons are listed.
 
-    ![User Story 2](documentation/testing/user-stories/user-story-2-screenshot.png)
+    ![User Story 2](/documentation/testing/user-stories/user-story-2-screenshot.png)
 
     3. As a first time visitor, I would like to see some sort of scoring system to see how well I do.
       * There is a score board area clearly marked on the home page, underneath the timer, beneath the game area. The score changes as the user "shoots" more zombies during the game.
       * After the game has finished, there is a custom alert that will pop up to tell the user how many points they have scored, even if they haven't scored any points with a bad luck message.
 
-    ![User Story 3]()
-    ![User Story Alerts]()
+    ![User Story 3](/documentation/testing/user-stories/user-story-3-screenshot.png)
+    ![User Story Alerts](/documentation/testing/user-stories/user-story-3-screenshot2.png)
 
 
 - #### Returning Visitor
@@ -78,9 +78,9 @@ To carry out testing, there are two methods; Automated and Manual testing.
     * When the user clicks this button, a modal appears with 4 options; Easy, Normal (default), Hard and Super Hard.
     * Once a difficulty setting button has been pressed, a custom alert appears to confirm their choice and the user then has to click the close button to go back to the game enabling them to change their mind before they go back to the game.
 
-    ![Returning User Story - Button](documentation/screenshots/difficulty.png)
-    ![Returning User Story - Button](documentation/screenshots/difficulty.png)
-    ![Returning User Story - Button](documentation/screenshots/difficulty.png)
+    ![Returning User Story - Button](/documentation/screenshots/difficulty.png)
+    ![Returning User Story - Button](/documentation/testing/user-stories/returning-user-story-screenshot.png)
+    ![Returning User Story - Button](/documentation/testing/user-stories/returning-user-story-screenshot2.png)
 
 - #### Frequent Visitor Testing
 
@@ -127,23 +127,21 @@ To carry out testing, there are two methods; Automated and Manual testing.
 
   [W3C](https://validator.w3.org/) was used to validate all HTML & CSS code.
 
-  * index.html - Passed - [Result](documentation/testing/w3c-index.png)
-  * meet-the-artists.html - Passed - [Result](documentation/testing/w3c-meet-artists.png)
-  * faqs.html - Passed - [Result](documentation/testing/w3c-faqs.png)
-  * contact-us.html - Passed - [Result](documentation/testing/w3c-contact.png)
-  * book-in.html - Passed - [Result](documentation/testing/w3c-book.png)
-  * style.css - Passed - [Result](documentation/testing/w3c-css.png)    
+  * index.html - Passed - [Result]()
+  * how-to-play.html - Passed - [Result]()
+  * contact.html - Passed - [Result]()
+  * style.css - Passed - [Result]()    
 
 ### JavaScript Validator
 
-[jshint](https://jshint.com/) was used to validate the small amount of Javascript within the project - Passed with no warnings/errors.
+[jshint](https://jshint.com/) was used to validate the Javascript within the project - Passed with no warnings/errors.
 ![JavaScript Validator Results](documentation/testing/javascript-validator.png)
 
 ### Chrome DevTools Audit Report
 
   The Google Page-speed Services/Lighthouse was used to assess the accessibiity of the project to ensure the site met expected accessible standards on desktop and mobile. From this result, I can see that the performance on my website could be better and this could be improved upon on future releases - the project scored highly in all other areas.
 
-  ![Lighthouse Result](documentation/testing/lighthouse-results.png)
+  ![Lighthouse Result]()
 
 - #### Browser Testing
 
