@@ -127,19 +127,19 @@ To carry out testing, there are two methods; Automated and Manual testing.
 
   [W3C](https://validator.w3.org/) was used to validate all HTML & CSS code.
 
-  * index.html - Passed - [Result]()
-  * how-to-play.html - Passed - [Result]()
-  * contact.html - Passed - [Result]()
-  * style.css - Passed - [Result]()    
+  * index.html - Passed - [Result](/documentation/testing/validators/w3c-index.png)
+  * how-to-play.html - Passed - [Result](/documentation/testing/validators/w3c-how-to-play.png)
+  * contact.html - Passed - [Result](/documentation/testing/validators/w3c-contact.png)
+  * style.css - Passed - [Result]( /documentation/testing/validators/w3c-css.png)    
 
 ### JavaScript Validator
 
-[jshint](https://jshint.com/) was used to validate the Javascript within the project - Passed with no warnings/errors.
-![JavaScript Validator Results](documentation/testing/javascript-validator.png)
+[jshint](https://jshint.com/) was used to validate the Javascript within the project - Passed
+![JavaScript Validator Results]()
 
 ### Chrome DevTools Audit Report
 
-  The Google Page-speed Services/Lighthouse was used to assess the accessibiity of the project to ensure the site met expected accessible standards on desktop and mobile. From this result, I can see that the performance on my website could be better and this could be improved upon on future releases - the project scored highly in all other areas.
+  The Google Page-speed Services/Lighthouse was used to assess the accessibiity of the project to ensure the site met expected accessible standards on desktop and mobile. From this result,
 
   ![Lighthouse Result]()
 
