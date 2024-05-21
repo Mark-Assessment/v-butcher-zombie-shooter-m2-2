@@ -182,7 +182,7 @@ I have been trying to make the project and website as accessible as possible. I 
   + [Google Fonts:](https://fonts.google.com/)
     - Google fonts were used by importing the font Rubik, into the style.css file which has been used on all pages within the project.
   + [Font Awesome:](https://fontawesome.com/icons)
-    - Font Awesome was used for the icon on the dark mode button.
+    - Font Awesome was used for the icon on the dark mode button and on the contact us page.
   + [SweetAlert2:](https://sweetalert2.github.io/)
     - Sweet Alert 2 was used to have more professional looking alert pop ups.
   + [jQuery:](https://jquery.com/)

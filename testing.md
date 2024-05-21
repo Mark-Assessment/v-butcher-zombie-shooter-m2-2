@@ -51,47 +51,43 @@ To carry out testing, there are two methods; Automated and Manual testing.
 - #### First Time Visitor
 
     1. As a first time visitor, I want to be able to start the game easily & see how much time I have to do it.
-        1. Once the home page has fully loaded, the user is greeted with a clear, simple layout which shows a control area underneath the game board. This consists of a clearly marked start button which the user can press to initialise the game and also to the left of this button, there is a time area where the user can see the amount of time they have to complete the game.
-        2. Once the start button is pressed, an alert pops up to warn the user about the loud 
-    2. As a first time visitor, I want to have instructions on how to play which are quick and easy to get to.
-    3. As a first time visitor, I would like to see some sort of scoring system to see how well I do.
-
-
+        * Once the home page has fully loaded, the user is greeted with a clear, simple layout which shows a control area underneath the game board. This consists of a clearly marked start button which the user can press to initialise the game and also to the left of this button, there is a time area where the user can see the amount of time they have to complete the game.
+        * Once the start button is pressed, an alert pops up to warn the user about the loud sound in the game. The user then has to click the 'start game' button in order to proceed with the game.
+        * When the user returns to the game area after closing the alert, there is a two second delay before the game starts and the timer starts counting down the number of seconds left in the game.
+    
     ![User Story 1](documentation/testing/user-stories/user-story-1-screenshot.png)
 
-  2. As a first time visitor, I want to be able to book in easily.
-    1. When the visitor loads the home page, within the nav bar at the top of the page there is a navigation link to the booking in page, or the user can scroll down to see an image of the studio that contains a centered booking in button, this means the user can access the booking in page from all pages, at any point within the page.
-    2. The booking in form itself is easy to read and simple to use with each text area appropriately labelled, what it is for. The input areas and checkbox all have the required attribute (apart from the uploading of reference photos which is not required), so the user can also ensure they are booked in effectively as all information is required by the studio.
+    2. As a first time visitor, I want to have instructions on how to play which are quick and easy to get to.
+      * When the user has loaded the homepage, there is a clear link in the navigation bar, or within the hamburger menu called "How To Play".
+      * Once the user clicks this link, they are taken to the how to play page where all instructions for the game and all buttons are listed.
 
     ![User Story 2](documentation/testing/user-stories/user-story-2-screenshot.png)
 
-  3. As a first time visitor, I want to have initial tattoo questions answered on a page so I don't have to contact anyone first.
-    1. The user can easily navigate to the clearly marked FAQ page from any page on the website. They can then view the questions via a collapsable element meaning they can just view the questions they require answers for.
-    2. Each question is a button which changes to a lighter colour to show feedback to the user as to which question they are currently hovering over. The user then needs to click on the question and the answer is expanded below.
+    3. As a first time visitor, I would like to see some sort of scoring system to see how well I do.
+      * There is a score board area clearly marked on the home page, underneath the timer, beneath the game area. The score changes as the user "shoots" more zombies during the game.
+      * After the game has finished, there is a custom alert that will pop up to tell the user how many points they have scored, even if they haven't scored any points with a bad luck message.
 
-    ![User Story 3 - Question Highlighted](documentation/testing/user-stories/user-story-3-screenshot.png)
-    ![User Story 3 - Question Clicked](documentation/testing/user-stories/user-story-3-screenshot-2.png)
+    ![User Story 3]()
+    ![User Story Alerts]()
 
-  4. As a first time visitor, I would like to view current/existing work by the artist.
-    1. The user can navigate to the 'Meet The Artists' page, whereby they will find links to the artists' social media and a sneak peak an example of each artists' work.
-    2. The links to each artists Instagram are clearly marked underneath each artist picture and introduction. These links have been coded to open into a new tab so the user isn't taken away from the main website completely.
-
-    ![User Story 4](documentation/testing/user-stories/user-story-4-screenshot.png)
 
 - #### Returning Visitor
 
-  1. As a returning visitor, I want to be able to easily and quickly find to contact details again.
-    1. The user can go straight to the contact page by going through the navigation link 'Contact Us' at the top of the page or they can obtain information straight away by going to the footer in place on every page, where it has become a standard practice to provide this information.
+  1. As a returning visitor, I want to be able to change the difficulty.
+    * Underneath the game area and start button, there is a clearly marked "Change Difficulty" button.
+    * When the user clicks this button, a modal appears with 4 options; Easy, Normal (default), Hard and Super Hard.
+    * Once a difficulty setting button has been pressed, a custom alert appears to confirm their choice and the user then has to click the close button to go back to the game enabling them to change their mind before they go back to the game.
 
-  2. As a returning visitor, I want to be able to gain quick access the artists' up-to-date work.
-    1. The user can either visit the studios Instagram, which is represented by an icon on the footer of each page, or they can visit the 'Meet The Artists' page and go to the specific artists' instagram which is shown as a link under the artists' picture and introduction.
-
-    ![Returning User Story](documentation/testing/user-stories/returning-user-story-screenshot.png)
+    ![Returning User Story - Button](documentation/screenshots/difficulty.png)
+    ![Returning User Story - Button](documentation/screenshots/difficulty.png)
+    ![Returning User Story - Button](documentation/screenshots/difficulty.png)
 
 - #### Frequent Visitor Testing
 
-  1. As a frequent visitor, I want to be able to see if any new artists have been added to the studio.
-    1. Any new artists will be added to the list of artists on the 'Meet The Artists' page, which is self explanatory and would jump out at the user as being the first place to check.
+  1. As a frequent visitor, I would like to change the theme/characters in the game.
+  2. As a returning visitor, I would like the option to save my score to a leaderboard, to see how well I score against others or to keep a log of my own score.
+
+  Neither of the above could be completed due to time constraints and skill level.
 
   #### Full Testing
 
@@ -99,56 +95,31 @@ To carry out testing, there are two methods; Automated and Manual testing.
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Site Mini Logo's | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
-| Navigation Links | Links direct user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
-| Book In Button | Takes user to booking in page | Clicked on booking in button | Booking in page is loaded | Pass |
-| Book In Button Hover Effect | Button turns to a darker shade of teal when user hovers over it | Hover over booking in button | Button shows correct colour when hovering over it | Pass |
-| Laser By Stephania Logo/Button | Opens Laser by Stephania booking page in a new tab | Clicked on logo/button | A new tab opens and loads the correct page | Pass |
-| Social Media Icons | Opens a new tab to each social media account for the studio | Clicked on each icon | A new tab opens and loads the correct pages | Pass |
+| Site Text Logo | Link directs the user back to the home page | Clicked text title | Home page reloads | Pass |
+| Navigation Links | Links take user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
+| Start Button | Produces a pop up alert to warn the user about sound and starts the game after a two second delay | Clicked on start button | Alert appears, start game button on alert pressed, two second delay passes and the zombies start popping up from behind the headstones | Pass |
+| Change Difficulty Button | Button initiates a modal containing all difficulty settings, user selects difficulty, alert confirming choice appears, user needs to clear alert and modal to go back to game | Click button, select each difficulty | Button shows modal, all difficulty settings make the confirmation alert appear and each time the time of the game is changed to the correct amount | Pass |
+| Button Hover Effect | All buttons turn (including menu toggler) to a lighter shade of purple when user hovers over it | Hover over all buttons | Buttons show correct colour when hovering over it | Pass |
+| Dark Mode Button | Changes colours on home page to darker colours | Clicked on button | Page background changes to black, nav and buttons all change to a darker shade of purple than they were previously | Pass |
+| Timer and Scoreboard | Updates when game is in progress | Started a game | Timer counts down and score number is added to when user clicks on a zombie | Pass |
 
-  ##### Meet The Artists
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| Site Mini Logo's | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
-| Navigation Links | Links direct user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
-| Links for each artist | Opens each link in a new tab, email link opens new email in users default programme | Clicked on each link | Both webpage links open into a new tab displaying appropriate page and email opens a new email in Outlook | Pass |
-| Laser By Stephania Logo/Button | Opens Laser by Stephania booking page in a new tab | Clicked on logo/button | A new tab opens and loads the correct page | Pass |
-| Social Media Icons | Opens a new tab to each social media account for the studio | Clicked on each icon | A new tab opens and loads the correct pages | Pass |
-
-  ##### FAQs
+  ##### How To Play
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Site Mini Logo's | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
-| Navigation Links | Links direct user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
-| Question Button | Expands answer below when clicked | Clicked on each question button | Answers are displayed correctly below question | Pass |
-| Question Button Hover Effect | Button turns to a lighter shade of teal when user hovers over it | Hover over each question button | Button shows correct colour when hovering over it | Pass |
-| Laser By Stephania Logo/Button | Opens Laser by Stephania booking page in a new tab | Clicked on logo/button | A new tab opens and loads the correct page | Pass |
-| Social Media Icons | Opens a new tab to each social media account for the studio | Clicked on each icon | A new tab opens and loads the correct pages | Pass |
+| Site Text Link | Link directs the user back to the home page | Clicked text title | Home page reloads | Pass |
+| Navigation Links | Links take user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
 
   ##### Contact Us
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Site Mini Logo's | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
-| Navigation Links | Links direct user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
-| Email the Studio Link | Link opens new email | Clicked on link | A new email is opened in Outlook | Pass |
-| Laser By Stephania Logo/Button | Opens Laser by Stephania booking page in a new tab | Clicked on logo/button | A new tab opens and loads the correct page | Pass |
-| Social Media Icons | Opens a new tab to each social media account for the studio | Clicked on each icon | A new tab opens and loads the correct pages | Pass |
+| Site Mini Logo's | Link directs the user back to the home page | Clicked text title | Home page reloads | Pass |
+| Navigation Links | Links take user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
+| Form | User is required to complete all input boxes | Filled in first name only, press submit | "Please fill out this field" appears on the next input box | Pass |
+| Form | User cannot use white space to skip filling out any of the input fields | Type in two spaces in each input field and press submit | Page just scrolls back to the top of the form | Pass |
+| Form | Clear Form button resets any information that has been inputted | Typed something into each input box and clicked clear form button | All information removed and replaced with placeholders | Pass |
 
-  ##### Book In
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| Site Mini Logo's | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
-| Navigation Links | Links direct user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
-| Buttons For All Email Links | Opens a new email to either studio or artists address | Clicked on each picture button | A new email opens in Outlook | Pass |
-| Form | Once user has filled in all required inputs, ticked check box and pressed submit, user taken to thank you page | Filled in all text areas, ticked checkbox and clicked on submit button | Directs user to thank you page | Pass |
-| Form | If user puts whitespace instead of text into text inputs displays error to user | Entered three spaces into each box | Displays error - "Please match the requested format" and does not let the user submit the form information | Pass |
-| Clear Form Button | Removes inputted text from all text inputs | Clicked on button | All information removed | Pass |
-| Laser By Stephania Logo/Button | Opens Laser by Stephania booking page in a new tab | Clicked on logo/button | A new tab opens and loads the correct page | Pass |
-| Social Media Icons | Opens a new tab to each social media account for the studio | Clicked on each icon | A new tab opens and loads the correct pages | Pass |
 
 ## AUTOMATED TESTING
 
