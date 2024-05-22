@@ -286,10 +286,20 @@ footer {
   padding: 0.5rem;
 }
 
-#close-modal2 {
-  background-color: #c785ec;
-  border: #634087;
+.skillbtn:hover {
+  background-color: #a86add;
+}
+
+#close-modal {
+  color: black;
+  background-color: #a86add;
+  border: 5px solid #634087;
   margin: 1rem;
+}
+
+#close-modal:hover {
+  background-color: #deb7ff;
+  border: 5px solid #a86add;
 }
 
 /*----------------------------------------------- How To Play Page */
