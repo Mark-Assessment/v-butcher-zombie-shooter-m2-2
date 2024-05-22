@@ -10,7 +10,6 @@ let score = 0;
 let gameDuration = 20000; // sets default game duration to 20 seconds
 let timerInterval;
 
-
 // function to get a random time for the zombies to pop up
 function randomTime(min, max) {
     return Math.round(Math.random() * (max - min) + min);
@@ -136,7 +135,6 @@ function difficultySetting(difficulty) {
             break;
         default:
             gameDuration = 20000; // Default duration if difficulty is not recognized
-            break;
     }
 }
 
@@ -157,7 +155,7 @@ function gameOver() {
                 });
             }
         }
-    }, 1000) // adds a delay after the end of the game to display the score
+    }, 1000); // adds a delay after the end of the game to display the score
 }
 
 function darkMode() {

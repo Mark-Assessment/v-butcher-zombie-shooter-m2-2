@@ -95,7 +95,7 @@ To carry out testing, there are two methods; Automated and Manual testing.
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Site Text Logo | Link directs the user back to the home page | Clicked text title | Home page reloads | Pass |
+| Site Logo Text Logo | Link directs the user back to the home page | Clicked text title | Home page reloads | Pass |
 | Navigation Links | Links take user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
 | Start Button | Produces a pop up alert to warn the user about sound and starts the game after a two second delay | Clicked on start button | Alert appears, start game button on alert pressed, two second delay passes and the zombies start popping up from behind the headstones | Pass |
 | Change Difficulty Button | Button initiates a modal containing all difficulty settings, user selects difficulty, alert confirming choice appears, user needs to clear alert and modal to go back to game | Click button, select each difficulty | Button shows modal, all difficulty settings make the confirmation alert appear and each time the time of the game is changed to the correct amount | Pass |
@@ -107,18 +107,27 @@ To carry out testing, there are two methods; Automated and Manual testing.
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Site Text Link | Link directs the user back to the home page | Clicked text title | Home page reloads | Pass |
+| Site Logo Text Link | Link directs the user back to the home page | Clicked text title | Home page reloads | Pass |
 | Navigation Links | Links take user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
 
   ##### Contact Us
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Site Mini Logo's | Link directs the user back to the home page | Clicked text title | Home page reloads | Pass |
+| Site Logo Text Link | Link directs the user back to the home page | Clicked text title | Home page reloads | Pass |
 | Navigation Links | Links take user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
-| Form | User is required to complete all input boxes | Filled in first name only, press submit | "Please fill out this field" appears on the next input box | Pass |
-| Form | User cannot use white space to skip filling out any of the input fields | Type in two spaces in each input field and press submit | Page just scrolls back to the top of the form | Pass |
-| Form | Clear Form button resets any information that has been inputted | Typed something into each input box and clicked clear form button | All information removed from form input boxes and replaced with placeholders | Pass |
+| Form Inputs | User is required to complete all input boxes | Filled in first name only, press submit | "Please fill out this field" appears on the next input box | Pass |
+| Form Inputs | User cannot use white space to skip filling out any of the input fields | Type in two spaces in each input field and press submit | Page just scrolls back to the top of the form | Pass |
+| Form Clear Form Button | button resets any information that has been inputted | Typed something into each input box and clicked clear form button | All information removed from form input boxes and replaced with placeholders | Pass |
+| Form Submit Button | button takes user to thank you page which re-directs back to home page after 10 seconds | Clicked button | Thank you page loads and then automatically takes the user back to the home page | Pass |
+
+##### 404 Error Page
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Site Logo Text Link | Link directs the user back to the home page | Clicked text title | Home page reloads | Pass |
+| Navigation Links | Links take user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
+| Go Back Home Button| button takes user back to home page | Clicked button | User is taken back to homepage | Pass |
+
 
 
 ## AUTOMATED TESTING
@@ -130,18 +139,25 @@ To carry out testing, there are two methods; Automated and Manual testing.
   * index.html - Passed - [Result](/documentation/testing/validators/w3c-index.png)
   * how-to-play.html - Passed - [Result](/documentation/testing/validators/w3c-how-to-play.png)
   * contact.html - Passed - [Result](/documentation/testing/validators/w3c-contact.png)
+  * thankyou.html - Passed - [Result](/documentation/testing/validators/w3c-thankyou.png)
+  * 404.html - Passed - [Result](/documentation/testing/validators/w3c-404.png)
   * style.css - Passed - [Result]( /documentation/testing/validators/w3c-css.png)    
 
 ### JavaScript Validator
 
-[jshint](https://jshint.com/) was used to validate the Javascript within the project - Passed
-![JavaScript Validator Results]()
+[jshint](https://jshint.com/) was used to validate the Javascript within the project - Passed with 178 warnings, 1 undefined variable and 3 unused variables. All warnings were about using const, let, arrow functions and template literals only being available in ES6. There was also a warning about a missing semicolon on line 143 which has been added.
+The undefined variable 'Swal' is because the validator does not recognise the library "Sweet Alerts 2" for the custom alerts that have been used. The unused variables it has quoted "startGame, changeDifficulty and darkMode" have all been used in the index.html file as onclick events.
+
+![JavaScript Validator Results](/documentation/testing/validators/jshint-validator.png)
 
 ### Chrome DevTools Audit Report
 
   The Google Page-speed Services/Lighthouse was used to assess the accessibiity of the project to ensure the site met expected accessible standards on desktop and mobile. From this result,
 
-  ![Lighthouse Result]()
+  **Desktop Result**
+  ![Lighthouse Result - Desktop](/documentation/testing/validators/lighthouse-results/lighthouse-result-desktop.png)
+  **Mobile Result**
+  ![Lighthouse Result - Mobile](/documentation/testing/validators/lighthouse-results/lighthouse-result-mobile.png)
 
 - #### Browser Testing
 

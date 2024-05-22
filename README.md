@@ -263,7 +263,7 @@ To clone the repository:
 
 * There is also a delay between the game starting and the timer starting, it is only very minor but I would have liked to fix it, if I had more time.
 
-* When the user changes the difficulty setting during a game, it does not reset the game.
+* When the user changes the difficulty setting during a game, it does not reset the game - the timer keeps counting down and the zombies keep popping up. the difficulty setting for the next game is changed however. More JavaScript could be added in order to accomplish this.
 
 * The gunshot sound added for when a user gets a click on a zombie, comes out at one, loud volume. It would have been good to be able to change this so it starts off quiet and the user can adjust the volume themselves. Instead, I created a warning alert to tell the user so they can adjust their volume prior to the game starting.
 

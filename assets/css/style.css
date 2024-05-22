@@ -481,6 +481,11 @@ h1 {
   border: 5px solid #a86add;
 }
 
+.btn:hover {
+  background-color: #a86add;
+  border: 5px solid #a86add;
+}
+
 
 /*--------------------------------------------Media Queries*/
 
