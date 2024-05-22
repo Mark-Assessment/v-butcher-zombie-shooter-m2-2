@@ -128,8 +128,6 @@ To carry out testing, there are two methods; Automated and Manual testing.
 | Navigation Links | Links take user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
 | Go Back Home Button| button takes user back to home page | Clicked button | User is taken back to homepage | Pass |
 
-
-
 ## AUTOMATED TESTING
 
 ### W3C Validator
@@ -152,7 +150,7 @@ The undefined variable 'Swal' is because the validator does not recognise the li
 
 ### Chrome DevTools Audit Report
 
-  The Google Page-speed Services/Lighthouse was used to assess the accessibiity of the project to ensure the site met expected accessible standards on desktop and mobile. From this result,
+  The Google Page-speed Services/Lighthouse was used to assess the accessibiity of the project to ensure the site met expected accessible standards on desktop and mobile. From this result, I can see that the website works really well when viewed on a desktop computer but the performance is slightly lacking for the mobile view, with more time this could be improved upon.
 
   **Desktop Result**
   ![Lighthouse Result - Desktop](/documentation/testing/validators/lighthouse-results/lighthouse-result-desktop.png)
