@@ -147,4 +147,4 @@ To carry out testing, there are two methods; Automated and Manual testing.
 
   - The Website has been tested on Google Chrome, Safari, and Microsoft Edge.
   - The website was tested on my iPhone 12 mobile and 27" Microsoft PC devices. All other responsive testing was completed online.
-  - Testing has been completed to ensure that all pages were linking correctly and external links opened in a new tab.
+  - Testing has been completed to ensure that all pages, the contact form and subsequent thank you page that re-directs to home page, were linking and working correctly.

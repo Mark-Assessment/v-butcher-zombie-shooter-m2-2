@@ -101,7 +101,7 @@ This is a shooting game for my Milestone 2 project, it is based on a whack-a-mol
 
 - #### Imagery
 
-  - For the headstones which the zombies pop out from behind, I have obtained a graphic from [Hiclipart](https://www.hiclipart.com/). For the zombies, I have downloaded free characters from [Craftpix.net](https://craftpix.net/freebies/free-zombie-villager-chibi-character-sprites/) and I used a favicon from [Favicon.io](https://favicon.io/emoji-favicons/biohazard/) using the biohazard symbol, fits really well with the zombie theme.
+  - For the headstones which the zombies pop out from behind, I have obtained a graphic from [Hiclipart](https://www.hiclipart.com/). For the zombies, I have downloaded free characters from [Craftpix.net](https://craftpix.net/freebies/free-zombie-villager-chibi-character-sprites/) and I used a biohazard symbol favicon & larger sized image for my 404 page, from [Favicon.io](https://favicon.io/emoji-favicons/biohazard/), which fits really well with the zombie theme.
 
 - #### Wireframes
 
@@ -113,7 +113,7 @@ This is a shooting game for my Milestone 2 project, it is based on a whack-a-mol
 
 ## Technology Used
 
-This project is written using HTML, CSS and JavaScript with JQuery in Gitpod. I have also used flex-box and bootstrap to make the site responsive, and it is currently being hosted on GitHub.
+This project is written using HTML, CSS and JavaScript in Gitpod. I have also used flex-box and bootstrap to make the site responsive, and it is currently being hosted on GitHub.
 
 ## Features
 
@@ -185,8 +185,6 @@ I have been trying to make the project and website as accessible as possible. I 
     - Font Awesome was used for the icon on the dark mode button and on the contact us page.
   + [SweetAlert2:](https://sweetalert2.github.io/)
     - Sweet Alert 2 was used to have more professional looking alert pop ups.
-  + [jQuery:](https://jquery.com/)
-    - jQuery comes with Bootstrap and makes the navbar responsive.
   + [Git](https://git-scm.com/)
     - The git command was used for version control via the terminal in Gitpod, to commit to Git and Push to GitHub.
   + [GitHub:](https://github.com/)
@@ -265,6 +263,8 @@ To clone the repository:
 
 * There is also a delay between the game starting and the timer starting, it is only very minor but I would have liked to fix it, if I had more time.
 
+* When the user changes the difficulty setting during a game, it does not reset the game.
+
 * The gunshot sound added for when a user gets a click on a zombie, comes out at one, loud volume. It would have been good to be able to change this so it starts off quiet and the user can adjust the volume themselves. Instead, I created a warning alert to tell the user so they can adjust their volume prior to the game starting.
 
 - - -
@@ -275,12 +275,12 @@ To clone the repository:
 
 * I followed [The Whack-A-Mole tutorial](https://javascript30.com/) and adapted code to suit my project, which got the game set up and the score being logged.
 * I learned about how to code a countdown timer from [this tutorial](https://www.freecodecamp.org/news/how-to-create-a-countdown-timer/) for my time area.
-* My mentor told me about this [Custom Alert Replacement](https://sweetalert2.github.io/) to make the project alerts look more professional.
+* My mentor told me about this [Custom Alert Replacement](https://sweetalert2.github.io/) to make the project alerts used on the index page look more professional.
 * I added the sr-only attribute to the navigations links, and found this [Stack Overflow](https://stackoverflow.com/questions/19758598/what-is-sr-only-in-bootstrap-3) that gave some example css styling to go with it.
 
 ### Content
 
-All text content within the project has been written by myself, any images have been taken from royalty free websites and are attributed in the (#imagery) section of the readme.
+All text content within the project has been written by myself, any images have been taken from royalty free websites and are attributed in the [#imagery] section of the readme.
 I have also used audio of a gunshot sound, obtained from [Pixabay](https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6349).
 
 ### Acknowledgments
@@ -289,4 +289,3 @@ I would like to acknowledge the following people:
 
 * Rachel Furlong - Tutor: For giving great advice and reassurance.
 * Jubril Akolade - Mentor: Providing with great guidance, and helpful tips.
-* ChatGPT - AI: Helping to develop my understanding of JavaScript.
