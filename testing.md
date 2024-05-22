@@ -118,7 +118,7 @@ To carry out testing, there are two methods; Automated and Manual testing.
 | Navigation Links | Links take user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
 | Form | User is required to complete all input boxes | Filled in first name only, press submit | "Please fill out this field" appears on the next input box | Pass |
 | Form | User cannot use white space to skip filling out any of the input fields | Type in two spaces in each input field and press submit | Page just scrolls back to the top of the form | Pass |
-| Form | Clear Form button resets any information that has been inputted | Typed something into each input box and clicked clear form button | All information removed and replaced with placeholders | Pass |
+| Form | Clear Form button resets any information that has been inputted | Typed something into each input box and clicked clear form button | All information removed from form input boxes and replaced with placeholders | Pass |
 
 
 ## AUTOMATED TESTING

@@ -106,7 +106,6 @@ function shoot(e) {
 
 // function to show modal for user to select/change difficulty setting
 function changeDifficulty() {
-    const difficultyBtn = document.getElementsByClassName('difficulty');
     const openModalDifficulty = document.getElementById('open-modal2');
     const closeModalDifficulty = document.getElementById('close-modal2');
     const modalContainerDifficulty = document.getElementById('modal-container-difficulty');
