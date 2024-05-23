@@ -37,12 +37,13 @@ Visit the deployed website: [Zombie Shooter by DeadPixels](https://veebee4.githu
 To carry out testing, there are two methods; Automated and Manual testing.
 
 ### Automated Testing (TDD)
-    Test Driven Development is carried out by writing tests in Jest that do not pass and then writing the least amount of code to get the test to pass. This ensures the code you are writing is robust and working at every step of the coding process. 
-    I have not used this testing in my project due to time constraints but I can see how beneficial writing tests in Jest could have been throughout the project to carry out testing of the code to pick up errors early in development, at every step of the project . Otherwise you could write all of your code and arrive at the finished product with lots of bugs and some features not working.
-    This kind of testing only performs well if the right and well thoughtout questions are asked, and it does not test what a user would experience either.
+> Test Driven Development is carried out by writing tests in Jest that do not pass and then writing the least amount of code to get the test to pass. This ensures the code you > are writing is robust and working at every step of the coding process. 
+> I have not used this testing in my project due to time constraints but I can see how beneficial writing tests in Jest could have been throughout the project to carry out 
+> testing of the code to pick up errors early in development, at every step of the project . Otherwise you could write all of your code and arrive at the finished product with > lots of bugs and some features not working.
+> This kind of testing only performs well if the right and well thoughtout questions are asked, and it does not test what a user would experience either.
 
 ### Manual Testing (BDD)
-    Behaviour Driven Development is the expected outcome of a particular action. This is used to test against the user stories that are written for our projects in a format of; Given, When and Then. For example, **given** that a user wants to play a game, **when** the start button is pressed, **then** the game will initialise - This is testable and repeatable but each test must only be for one thing. 
+> Behaviour Driven Development is the expected outcome of a particular action. This is used to test against the user stories that are written for our projects in a format of; > > Given, When and Then. For example, **given** that a user wants to play a game, **when** the start button is pressed, **then** the game will initialise - This is testable and > repeatable but each test must only be for one thing. 
 
 ## MANUAL TESTING
 
@@ -51,21 +52,25 @@ To carry out testing, there are two methods; Automated and Manual testing.
 - #### First Time Visitor
 
     1. As a first time visitor, I want to be able to start the game easily & see how much time I have to do it.
-        * Once the home page has fully loaded, the user is greeted with a clear, simple layout which shows a control area underneath the game board. This consists of a clearly marked start button which the user can press to initialise the game and also to the left of this button, there is a time area where the user can see the amount of time they have to complete the game.
-        * Once the start button is pressed, an alert pops up to warn the user about the loud sound in the game. The user then has to click the 'start game' button in order to proceed with the game.
-        * When the user returns to the game area after closing the alert, there is a two second delay before the game starts and the timer starts counting down the number of seconds left in the game.
+    * Once the home page has fully loaded, the user is greeted with a clear, simple layout which shows a control area underneath the game board. This consists of a clearly marked start button which the user can press to initialise the game and also to the left of this button, there is a time area where the user can see the amount of time they have to complete the game.
+
+    * Once the start button is pressed, an alert pops up to warn the user about the loud sound in the game. The user then has to click the 'start game' button in order to proceed with the game.
+
+    * When the user returns to the game area after closing the alert, there is a two second delay before the game starts and the timer starts counting down the number of seconds left in the game.
     
-    ![User Story 1](/documentation/testing/user-stories/user-story-1-screenshot.png)
+    ![User Story 1](/documentation/testing/user-stories/user-story-1-screenshot.png)<br/>
 
     2. As a first time visitor, I want to have instructions on how to play which are quick and easy to get to.
-      * When the user has loaded the homepage, there is a clear link in the navigation bar, or within the hamburger menu called "How To Play".
-      * Once the user clicks this link, they are taken to the how to play page where all instructions for the game and all buttons are listed.
+    * When the user has loaded the homepage, there is a clear link in the navigation bar, or within the hamburger menu called "How To Play".
 
-    ![User Story 2](/documentation/testing/user-stories/user-story-2-screenshot.png)
+    * Once the user clicks this link, they are taken to the how to play page where all instructions for the game and all buttons are listed.
+
+    ![User Story 2](/documentation/testing/user-stories/user-story-2-screenshot.png)<br/>
 
     3. As a first time visitor, I would like to see some sort of scoring system to see how well I do.
-      * There is a score board area clearly marked on the home page, underneath the timer, beneath the game area. The score changes as the user "shoots" more zombies during the game.
-      * After the game has finished, there is a custom alert that will pop up to tell the user how many points they have scored, even if they haven't scored any points with a bad luck message.
+    * There is a score board area clearly marked on the home page, underneath the timer, beneath the game area. The score changes as the user "shoots" more zombies during the game.
+
+    * After the game has finished, there is a custom alert that will pop up to tell the user how many points they have scored, even if they haven't scored any points with a bad luck message.
 
     ![User Story 3](/documentation/testing/user-stories/user-story-3-screenshot.png)
     ![User Story Alerts](/documentation/testing/user-stories/user-story-3-screenshot2.png)
@@ -78,9 +83,9 @@ To carry out testing, there are two methods; Automated and Manual testing.
     * When the user clicks this button, a modal appears with 4 options; Easy, Normal (default), Hard and Super Hard.
     * Once a difficulty setting button has been pressed, a custom alert appears to confirm their choice and the user then has to click the close button to go back to the game enabling them to change their mind before they go back to the game.
 
-    ![Returning User Story - Button](/documentation/screenshots/difficulty.png)
-    ![Returning User Story - Button](/documentation/testing/user-stories/returning-user-story-screenshot.png)
-    ![Returning User Story - Button](/documentation/testing/user-stories/returning-user-story-screenshot2.png)
+  ![Returning User Story - Button](/documentation/screenshots/difficulty.png)<br/>
+  ![Returning User Story - Button](/documentation/testing/user-stories/returning-user-story-screenshot.png)<br/>
+  ![Returning User Story - Button](/documentation/testing/user-stories/returning-user-story-screenshot2.png)<br/>
 
 - #### Frequent Visitor Testing
 
@@ -89,9 +94,9 @@ To carry out testing, there are two methods; Automated and Manual testing.
 
   Neither of the above could be completed due to time constraints and skill level.
 
-  #### Full Testing
+## Full Testing
 
-  ##### Home Page
+  ### Home Page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
@@ -103,14 +108,14 @@ To carry out testing, there are two methods; Automated and Manual testing.
 | Dark Mode Button | Changes colours on home page to darker colours | Clicked on button | Page background changes to black, nav and buttons all change to a darker shade of purple than they were previously | Pass |
 | Timer and Scoreboard | Updates when game is in progress | Started a game | Timer counts down and score number is added to when user clicks on a zombie | Pass |
 
-  ##### How To Play
+  ### How To Play
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Site Logo Text Link | Link directs the user back to the home page | Clicked text title | Home page reloads | Pass |
 | Navigation Links | Links take user to appropriate page | Clicked each link | Each link takes user to correct page | Pass |
 
-  ##### Contact Us
+  ### Contact Us
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
@@ -121,7 +126,7 @@ To carry out testing, there are two methods; Automated and Manual testing.
 | Form Clear Form Button | button resets any information that has been inputted | Typed something into each input box and clicked clear form button | All information removed from form input boxes and replaced with placeholders | Pass |
 | Form Submit Button | button takes user to thank you page which re-directs back to home page after 10 seconds | Clicked button | Thank you page loads and then automatically takes the user back to the home page | Pass |
 
-##### 404 Error Page
+  ### 404 Error Page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Site Logo Text Link | Link directs the user back to the home page | Clicked text title | Home page reloads | Pass |
@@ -132,7 +137,7 @@ To carry out testing, there are two methods; Automated and Manual testing.
 
 ### W3C Validator
 
-  [W3C](https://validator.w3.org/) was used to validate all HTML & CSS code.
+  [W3C HTML](https://validator.w3.org/) & [W3C CSS](https://jigsaw.w3.org/css-validator/) was used to validate all HTML & CSS code.
 
   * index.html - Passed - [Result](/documentation/testing/validators/w3c-index.png)
   * how-to-play.html - Passed - [Result](/documentation/testing/validators/w3c-how-to-play.png)
@@ -143,8 +148,8 @@ To carry out testing, there are two methods; Automated and Manual testing.
 
 ### JavaScript Validator
 
-[jshint](https://jshint.com/) was used to validate the Javascript within the project - Passed with 178 warnings, 1 undefined variable and 3 unused variables. All warnings were about using const, let, arrow functions and template literals only being available in ES6. There was also a warning about a missing semicolon on line 143 which has been added.
-The undefined variable 'Swal' is because the validator does not recognise the library "Sweet Alerts 2" for the custom alerts that have been used. The unused variables it has quoted "startGame, changeDifficulty and darkMode" have all been used in the index.html file as onclick events.
+> [jshint](https://jshint.com/) was used to validate the Javascript within the project - Passed with 178 warnings, 1 undefined variable and 3 unused variables. All warnings > > > were about using const, let, arrow functions and template literals only being available in ES6. There was also a warning about a missing semicolon on line 143 which has now > > been added into the code.
+> The undefined variable 'Swal' exists because the validator does not recognise the library "Sweet Alerts 2" for the custom alerts that have been used. The unused variables it > has quoted "startGame, changeDifficulty and darkMode" have all been used in the index.html file as onclick events.
 
 ![JavaScript Validator Results](/documentation/testing/validators/jshint-validator.png)
 
@@ -152,13 +157,13 @@ The undefined variable 'Swal' is because the validator does not recognise the li
 
   The Google Page-speed Services/Lighthouse was used to assess the accessibiity of the project to ensure the site met expected accessible standards on desktop and mobile. From this result, I can see that the website works really well when viewed on a desktop computer but the performance is slightly lacking for the mobile view, with more time this could be improved upon.
 
-  **Desktop Result**
-  ![Lighthouse Result - Desktop](/documentation/testing/validators/lighthouse-results/lighthouse-result-desktop.png)
-  **Mobile Result**
+  **Desktop Result**<br/>
+  ![Lighthouse Result - Desktop](/documentation/testing/validators/lighthouse-results/lighthouse-result-desktop.png)<br/>
+  **Mobile Result**<br/>
   ![Lighthouse Result - Mobile](/documentation/testing/validators/lighthouse-results/lighthouse-result-mobile.png)
 
 - #### Browser Testing
 
-  - The Website has been tested on Google Chrome, Safari, and Microsoft Edge.
-  - The website was tested on my iPhone 12 mobile and 27" Microsoft PC devices. All other responsive testing was completed online.
-  - Testing has been completed to ensure that all pages, the contact form and subsequent thank you page that re-directs to home page, were linking and working correctly.
+  > The Website has been tested on Google Chrome, Safari, and Microsoft Edge.
+  > The website was tested on my iPhone 12 mobile and 27" Microsoft PC devices. All other responsive testing was completed online.
+  > Testing has been completed to ensure that all pages, the contact form and subsequent thank you page that re-directs to home page, were linking and working correctly.
