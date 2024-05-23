@@ -61,7 +61,7 @@ This is a shooting game for my Milestone 2 project, it is based on a whack-a-mol
 - #### Frequent Visitor Goals
 
   1. As a frequent visitor, I would like to change the theme/characters in the game.
-  2. As a returning visitor, I would like the option to save my score to a leaderboard, to see how well I score against others or to keep a log of my own score.
+  2. As a frequent visitor, I would like the option to save my score to a leaderboard, to see how well I score against others or to keep a log of my own score.
 
 ---
 
@@ -105,28 +105,34 @@ This is a shooting game for my Milestone 2 project, it is based on a whack-a-mol
 
 - #### Wireframes
 
-  - Home Page Wireframes ![Desktop](/documentation/wireframes/home-desktop.png) ![Tablet](/documentation/wireframes/home-tablet.png) ![Mobile](/documentation/wireframes/home-mobile.png)
-  - How To Play Wireframe ![Desktop](/documentation/wireframes/how-to-play.png)
-  - Contact Us Wireframe ![Desktop](/documentation/wireframes/contact-us-desktop.png) ![Tablet](/documentation/wireframes/contact-us-tablet.png) ![Mobile](/documentation/wireframes/contact-us-mobile.png)
+  - **Home Page Wireframes** ![Desktop](/documentation/wireframes/home-desktop.png) ![Tablet](/documentation/wireframes/home-tablet.png) <center>![Mobile](/documentation/wireframes/home-mobile.png)</center>
+
+  ---
+
+  - **How To Play Wireframe** ![Desktop](/documentation/wireframes/how-to-play.png)
+
+  ---
+
+  - **Contact Us Wireframe** ![Desktop](/documentation/wireframes/contact-us-desktop.png) ![Tablet](/documentation/wireframes/contact-us-tablet.png) <center>![Mobile](/documentation/wireframes/contact-us-mobile.png)</center>
 
   The layout on the project has been slightly tweaked from the wireframes for aesthetic reasons.
 
 ## Technology Used
 
-This project is written using HTML, CSS and JavaScript in Gitpod. I have also used flex-box and bootstrap to make the site responsive, and it is currently being hosted on GitHub.
+This project is written using **HTML**, **CSS** and **JavaScript** in Gitpod. I have also used flex-box and bootstrap to make the site responsive, and it is currently being hosted on GitHub.
 
 ## Features
 
 The website comprises of a home page, where the main game element is contained and a modal pop-up to display the difficulty setting, along with a how to play page and contact us page with a form that directs to a thank you page which re-directs to the home page automatically.
 
-- Responsive on all devices, using a mobile first approach.
+- Responsive on all devices, using a mobile first approach.<br />
 ![Mobile, tablet & desktop view](/documentation/screenshots/all-screen-sizes.png)
 
-- Resonsive & Interactive Menu/Toggler and links on all pages, with feedback on text links which are bold when hovered over.
-![Menu Toggler](/documentation/screenshots/nav-toggler.png)
+- Resonsive & Interactive Menu/Toggler and links on all pages, with feedback on text links which are bold when hovered over.<br />
+![Menu Toggler](/documentation/screenshots/nav-toggler.png)<br />
 ![Menu Links](/documentation/screenshots/nav-link.png)
 
-- Form for user feedback/questions with autocomplete enabled on contact us page, it does not allow users to just type in white space to trick the input or to leave any of the inputs empty.
+- Form for user feedback/questions with autocomplete enabled on contact us page, it does not allow users to just type in white space to trick the input or to leave any of the inputs empty.<br />
 ![Form](/documentation/screenshots/form-screenshot.png)
 
 - Text logo on the nav element that also acts as a link back to the home page.
@@ -280,7 +286,7 @@ To clone the repository:
 
 ### Content
 
-All text content within the project has been written by myself, any images have been taken from royalty free websites and are attributed in the [#imagery] section of the readme.
+All text content within the project has been written by myself, any images have been taken from royalty free websites and are attributed in the [imagery](#imagery) section of the readme.
 I have also used audio of a gunshot sound, obtained from [Pixabay](https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6349).
 
 ### Acknowledgments
